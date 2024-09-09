@@ -1,18 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Hello World!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bluestyle.css">
-    </head>
-    <body>
+<head>
+    <!--
 
-        <h1>Hello world!</h1>
-        <div><img src="img_hello_world.jpg" alt="Hello World from Space" style="width:100%;max-width:640px"></div>
-        <p>This is the first file in my new Git Repo.</p>
-        <p>This line is here to show how merging works.</p>
-        <div><img src="img_hello_git.jpg" alt="Hello Git" style="width:100%;max-width:640px"></div>
+      Author: Mark Sladen
+      Date:   2023
 
-    </body>
+      Filename:   index.html
+
+   -->
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>GMSL</title>
+    <link href="reset.css" rel="stylesheet" >
+    <link href="index.css" rel="stylesheet" >
+    <script src="index.js" type ="text/javascript" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/header.jpg" alt="techie image" >
+        <h2 id="timeHeading">Today</h2>
+        <div id="currentTime"><span>11/3/2017</span><span>2:45:12 p.m.</span></div>
+        <nav class="horizontalNavigation">
+            <ul>
+                <li><a href="Cauli-WoodGallery/cw_home.html">Cauli-Wood Gallery</a></li>
+                <li><a href="PandaisiaChocolates/pc_home.html">Pandaisia Chocolates</a></li>
+                <li><a href="SlateAndPencil/sp_home.html">Slate & Pencil Tutoring</a></li>
+                <li><a href="DakotaListenerRadio/dlr_evenings.html">Dakota Listener Radio</a></li>
+                <li><a href="HarpeGaming/hg_game.html">Harpe Gaming</a></li>
+            </ul>
+            <ul>
+                <li><a href="Tulsa/tny_clock.html">Tulsa's New Years Eve Bash</a></li>
+                <li><a href="Tulsa/tny_july.html">Tulsa's Summer Party</a></li>
+                <li><a href="TrustedFriends/tf_home.html">Trusted Friends</a></li>
+                <li><a href="TrophyCaseSports/tc_cart.html">Trophy Case Sports</a></li>
+                <li><a href="AppalachianHouse/ah_report.html">Appalachian House</a></li>
+            </ul>
+            <ul>
+                <li><a href="StarDustStories/sd_map.html">Star Dust Stories</a></li>
+                <li><a href="BridgerCollege/bc_union.html">Bridger College Student Union</a></li>
+                <li><a href="LymanHallTheater/lht_august.html">Lyman Hall Theater</a></li>
+                <li><a href="ChocolateChipCookies.html">Chocolate Chip Cookies</a></li>
+
+            </ul>
+            <ul>
+                <li><a href="JapanesePuzzleFactory/jpf_hanjie.html">The Japanese Puzzle Factory</a></li>
+                <li><a href="http://sladen.infinityfreeapp.com/JapanesePuzzleFactory/jpf_hitori.html">Hitori - The Japanese Puzzle Factory</a></li>
+                <li><a href="http://sladen.infinityfreeapp.com/OnlineBookworms/bw_review.html">Online BookWorms</a></li>
+                <li><a href="http://sladen.infinityfreeapp.com/TheMathTable/mt_calc.html">The Math Table</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <aside>
+        <p>
+            Eget egestas purus viverra accumsan in nisl. Donec pretium vulputate 
+            sapien nec. Feugiat scelerisque varius morbi enim nunc faucibus 
+            a pellentesque. Cras semper auctor neque vitae tempus. Blandit 
+            massa enim nec dui nunc mattis enim ut tellus.
+        </p>
+        <img id="robots" src="https://www.traileraddict.com/article/wp-content/uploads/2016/10/portal-wallpaper.jpg" alt="Portal robots" />
+    </aside>
+
+    <article>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Augue mauris augue neque gravida in fermentum et. Cras adipiscing 
+            enim eu turpis egestas pretium aenean pharetra. Maecenas pharetra 
+            convallis posuere morbi. Dictum non consectetur a erat nam.
+        </p>
+        <img id="wall-e" src="https://wallpapercave.com/wp/wp1816258.jpg" alt="Wall-E" />
+    </article>
+    <dl>
+        <div>
+            <dt>bandwith</dt>
+            <dd>A measure of data transfer speed over a network</dd>
+        </div>
+        <div>
+            <dt>HTTP</dt>
+            <dd>The protocol used to communicate with web servers</dd>
+        </div>
+    </dl>
+    <h3>Some values of the display property</h3>
+    <table>
+        <tr>
+            <th>Display Value</th>
+            <th>Appearance</th>
+        </tr>
+        <tr>
+            <td>block</td>
+            <td>displayed as block</td>
+        </tr>
+        <tr>
+            <td>table</td>
+            <td>displayed as a web table</td>
+        </tr>
+        <tr>
+            <td>inline</td>
+            <td>displayed in-line within a block</td>
+        </tr>
+        <tr>
+            <td>inline-block</td>
+            <td>Treated as a block placed in-line within another block</td>
+        </tr>
+        <tr>
+            <td>run-in</td>
+            <td>Displayed as a block unless its next sibling is also a block, in which case, it is displayed in-line, essentially combining the two blocks into one</td>
+        </tr>
+        <tr>
+            <td>inherit</td>
+            <td>Inherits the display property of the parent element</td>
+        </tr>
+        <tr>
+            <td>list-item</td>
+            <td>Displayed as a list item along with a bullet marker</td>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>Prevented from displaying, removing it from the rendered page</td>
+        </tr>
+    </table>
+    <footer>
+        The End
+    </footer>
+</body>
 </html>
