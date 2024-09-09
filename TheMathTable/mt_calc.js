@@ -50,8 +50,6 @@ function init() {
     // Declare the calcButtons variable containing the collection of page 
     // elements belonging to the calcButton class
     var calcButtons;
-    window.alert("Hello \
-world!");
 }
 
 function eraseChar(textStr) {
