@@ -52,7 +52,6 @@ function countdown() { // used to update the minsLeft, secsLeft, and timeLeft va
    // variable by 1.
    timeLeft--;
 
-   stopClock();
 }
 
 // 10. insert a function named stopClock(). Its function is to stop the clock
@@ -62,9 +61,8 @@ function stopClock() {
    // 10. a. User the insertAdjacentHTML() method to insert the following
    // HTML code <br>(Order Expired), directly before the end of the page
    // element with the ID TimeHead.
-   document.getElementById("TimeHead").insertAdjacentHTML(beforeEnd, "<br>(Order Expired)");
+   document.getElementById("TimeHead").insertAdjacentHTML("beforeEnd", "<br>(Order Expired)");
    clearInterval(clockID);
-   window.alert("waka!");
 }
 
 
