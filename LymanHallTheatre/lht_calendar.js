@@ -80,7 +80,7 @@ function calWeekdayRow() {
 
 /* Function to calculate the number of days in the month */
 function daysInMonth(calDate) {
-    // Array of dayes in each month
+    // Array of days in each month
     var dayCount = [31,28,31,30,31,30,31,31,30,31,30,31];
 
     // Extract the four digit year and month value
