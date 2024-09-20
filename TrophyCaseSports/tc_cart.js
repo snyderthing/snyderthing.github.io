@@ -25,7 +25,7 @@ for (var i = 0; i < item.length; i++) {
                   "<td>$" + itemPrice[i] + "</td>" +
                   "<td>" + itemQty[i] + "</td>";
     let itemCost = itemPrice[i] * itemQty[i];
-    cartHTML += "<td>$" + itemCost + "</td>";
+    cartHTML += "<td>$" + itemCost + "</td></tr>";
     orderTotal += itemCost;
 }
 
