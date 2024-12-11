@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="assignments.css">
+    <script src="assignments1.js" defer></script>
+    <script src="assignment.js" defer></script>
 </head>
 
 <body>
@@ -16,10 +19,20 @@
             </ul>
         </nav>
     </header>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi sint dolor, quas voluptatibus ipsam.
-        Illum eum dolores itaque, obcaecati qui deserunt accusantium, perspiciatis ratione, illo voluptas porro labore
-        placeat.</p>
-
+    <main>
+        <div class="quiz-container">
+            <h1 id="quiz-header">Quiz</h1>
+            <div class="question">
+                <p id="question-text">Question 1: What is the capital of the UK?</p>
+                <div class="choices">
+                    <button class="choice" onclick="checkAnswer(0)">London</button>
+                    <button class="choice" onclick="checkAnswer(1)">Paris</button>
+                    <button class="choice" onclick="checkAnswer(2)">Nairobi</button>
+                    <button class="choice" onclick="checkAnswer(3)">Jaguaristan</button>
+                </div>
+                <p id="feedback"></p>
+            </div>
+        </div>
+    </main>
 </body>
-
 </html>
