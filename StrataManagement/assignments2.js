@@ -178,7 +178,7 @@ const questions = [
             "The general duty to report is a unique duty to real estate licensees, not shared by other professions",
         "The British Columbia Financial Services Authority will not assist licensees in deciding whether they should report certain misconduct, as this is the responsibility of the licensee to decide."],
         correct: 1
-    },
+    }
 
     /*
     {
