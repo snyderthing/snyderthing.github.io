@@ -34,24 +34,24 @@ let correctAnswers = 0;
 
 function showQuestion() {
     const questionText = document.getElementById("question-text");
-    questionText.textContent = questions[currentQuestion].question;
+    questionText.innerHTML = questions[currentQuestion].question;
 
     const choices = document.querySelectorAll(".choice");
     choices.forEach((choice, index) => {
-        choice.textContent = questions[currentQuestion].choices[index];
+        choice.innerHTML = questions[currentQuestion].choices[index];
     });
 
     const feedback = document.getElementById("feedback");
-    feedback.textContent = "";
+    feedback.innerHTML = "";
 }
 
 function checkAnswer(selected) {
     const feedback = document.getElementById("feedback");
     if (selected === questions[currentQuestion].correct) {
-        feedback.textContent = "Right!";
+        feedback.innerHTML = "Right!";
         correctAnswers++;
     } else {
-        feedback.textContent = `Wrong. The correct answer was ${questions[currentQuestion].correct + 1}.`;
+        feedback.innerHTML = `Wrong. The correct answer was ${questions[currentQuestion].correct + 1}.`;
     }
     // Anonymous function (pg. 854). Arrow functions.
     // setTimeout syntax:   setTimeout(function, milliseconds, param1, param2, ...)

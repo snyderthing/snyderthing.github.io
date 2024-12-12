@@ -46,11 +46,11 @@ const questions = [
     },
     {
         // Question 6
-        question: `Which of the following statements is TRUE?
-            A. The provincial government has exclusive responsibility for such areas as the administration of justice within the province, criminal matters, and education.
-            B. The federal government has exclusive responsibility over marriage and divorce, postal services and civil rights.
-            C. The residual power to legislate over areas not specifically covered in the constitution is left with the municipal governments.
-            D. Where the common law does not provide an answer to a legal question, the courts must then refer to statute law for guidance.`,
+        question: `Which of the following statements is TRUE?<br>
+            <br>A. The provincial government has exclusive responsibility for such areas as the administration of justice within the province, criminal matters, and education.
+            <br>B. The federal government has exclusive responsibility over marriage and divorce, postal services and civil rights.
+            <br>C. The residual power to legislate over areas not specifically covered in the constitution is left with the municipal governments.
+            <br>D. Where the common law does not provide an answer to a legal question, the courts must then refer to statute law for guidance.`,
         choices: ["A, B, and C only",
             "A and B only",
             "All of the statements are true.",
@@ -77,11 +77,11 @@ const questions = [
     },
     {
         // Question 9
-        question: `Under the Real Estate Services Act, disciplinary action against a licensee normally begins with an investigation by the BC Financial Services Authority ("BCFSA"). Which of the following statements concerning an investigation to determine if disciplinary action should be taken against a licensee are TRUE?
-            A.  BCFSA may conduct an investigation to determine whether a licensee may have committed professional misconduct or conduct unbecoming a licensee.
-            B.  BCFSA can conduct an investigation only after receiving a complaint.
-            C.  At any time during business hours, BCFSA can inspect the records that are located on the business premises of a licensee.
-            D.  A misleading statement in an accountant's report is not enough to trigger an investigation.`,
+        question: `Under the Real Estate Services Act, disciplinary action against a licensee normally begins with an investigation by the BC Financial Services Authority ("BCFSA"). Which of the following statements concerning an investigation to determine if disciplinary action should be taken against a licensee are TRUE?<br>
+            <br>A.  BCFSA may conduct an investigation to determine whether a licensee may have committed professional misconduct or conduct unbecoming a licensee.
+            <br>B.  BCFSA can conduct an investigation only after receiving a complaint.
+            <br>C.  At any time during business hours, BCFSA can inspect the records that are located on the business premises of a licensee.
+            <br>D.  A misleading statement in an accountant's report is not enough to trigger an investigation.`,
         choices: ["A, B, and C only",
             "A and C only",
             "B and D only",
