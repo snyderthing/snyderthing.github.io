@@ -10,9 +10,12 @@ const questions = [
     },
     {
         // Question 2
-        question: "",
-        choices: [, , ,],
-        correct: 0
+        question: "A tenant has been renting a basement apartment from the landlord for over two years on a regular month to month periodic tenancy, without any rent increases. The tenant has received three months' written notice from his landlord that the rent will be increased from $1,600 to $1,625 per month. The tenant knows that similar basement suites in the neighbourhood are renting for only $1,500, and they think that the rent increase is the landlord's way of trying to get them to move out of the house. They are contemplating terminating the tenancy in order to find something cheaper, but before giving their notice to the landlord, they ask for your opinion. Assume that the government has not implemented a cap on rent increases in this scenario. You correctly advise them that:",
+        choices: ["for periodic tenancies, the Residential Tenancy Act requires four months' written notice for a rent increase. Accordingly, the rent increase is not effective.",
+            "provided the increase is not more than the change in the Consumer Price Index (CPI) over the past year, the increase is allowable, and the tenant has no right to dispute the increase.",
+            "in periodic tenancies, the Residential Tenancy Act requires that the notice for rent increases be reasonable. As such, one month's notice would likely have been sufficient.",
+        "the Residential Tenancy Act requires all rent increases to be justifiable. Because similar suites in the neighbourhood rent for significantly less, this rent increase will likely not be enforceable."],
+        correct: 1
     },
     {
         // Question 3
