@@ -64,7 +64,7 @@ function checkAnswer(selected) {
             const quizContainer = document.querySelector(".quiz-container");
             quizContainer.innerHTML = `<p>You got ${correctAnswers} out of ${questions.length} questions.</p>`;
         }
-    }, 2000);
+    }, 5000);
 }
 
 showQuestion();
