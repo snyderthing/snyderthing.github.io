@@ -77,7 +77,7 @@ const questions = [
         question: "A strata corporation has just successfully created a townhouse section. Which of the following is TRUE about this newly formed section?",
         choices: ["The section must pass its own set of bylaws.",
         "The section must elect an executive.",
-        "The strata corporation and section may no t use the same strata management company.",
+        "The strata corporation and section may not use the same strata management company.",
         "All of the above"],
         correct: 1
     },

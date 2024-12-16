@@ -1,11 +1,16 @@
 const questions = [
     {
         // Question 1
-        question: "Which of the following statements about the British Columbia civil court system would be considered accurate?",
-        choices: ["The next step for a disappointed litigant in a small claims dispute would be to appeal the small claims court decision to the BC Court of Appeal.",
-            "A matter brought before the BC Court of Appeal will be settled by a decision delivered by the majority of the judges after they have listened again to all of the evidence.",
-            "A BC Supreme Court judge can only hear cases involving amounts over $35,000.",
-            "A litigant can bring their case no further than the BC Court of Appeal, unless leave to appeal to the Supreme Court of Canada is granted."],
+        question: `Which of the following statements about the British Columbia civil court system would be considered accurate?
+        <br>
+        <br>A. The next step for a disappointed litigant in a small claims dispute would be to appeal the small claims court decision to the BC Court of Appeal.
+        <br>B. A matter brought before the BC Court of Appeal will be settled by a decision delivered by the majority of the judges after they have listened again to all of the evidence.
+        <br>C. A BC Supreme Court judge can only hear cases involving amounts over $35,000.
+        <br>D. A litigant can bring their case no further than the BC Court of Appeal, unless leave to appeal to the Supreme Court of Canada is granted.`,
+        choices: ["A, B, C, and D are accurate.",
+            "B and C only",
+            "C and D only",
+            "D only"],
         correct: 3
     },
     {
