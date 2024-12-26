@@ -33,11 +33,15 @@ const questions = [
     },
     {
         // Question 4
-        question: "Elaine obtained a judgment against Jerry for $35,000. Several months have passed and Jerry continues to refuse to pay Elaine anything. Which of the following steps is open to Elaine to enforce the judgment?",
-        choices: ["A. Elaine may register the judgment as a charge on Jerry's land; this would prevent any sale of it from completing because title to the property could not be transferred until the judgment was satisfied.",
-            "B. Elaine may apply to have a garnishing order served on Jerry's employer, ordering the employer to pay all of Jerry's wages into court; Elaine could then apply to have that money paid out to her.",
-            "C. Elaine may send a writ of execution to Jerry and then personally seize and sell enough of his assets to satisfy the judgment.",
-            "D. Elaine may register her judgment in the land title office and apply to the court for a judicial sale of Jerry's property, the proceeds of which would go towards paying off the judgment, following payment of prior charges."],
+        question: `Elaine obtained a judgment against Jerry for $35,000. Several months have passed and Jerry continues to refuse to pay Elaine anything. Which of the following steps is open to Elaine to enforce the judgment?<br>
+            <br>A. Elaine may register the judgment as a charge on Jerry's land; this would prevent any sale of it from completing because title to the property could not be transferred until the judgment was satisfied.
+            <br>B. Elaine may apply to have a garnishing order served on Jerry's employer, ordering the employer to pay all of Jerry's wages into court; Elaine could then apply to have that money paid out to her.
+            <br>C. Elaine may send a writ of execution to Jerry and then personally seize and sell enough of his assets to satisfy the judgment.
+            <br>D. Elaine may register her judgment in the land title office and apply to the court for a judicial sale of Jerry's property, the proceeds of which would go towards paying off the judgment, following payment of prior charges.`,
+        choices: ["All of the above",
+                 "A and B",
+                 "C and D",
+                 "D only"],
         correct: 3
     },
     {
