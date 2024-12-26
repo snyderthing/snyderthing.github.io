@@ -46,11 +46,15 @@ const questions = [
     },
     {
         // Question 5
-        question: "Donna wishes to obtain her brokerage licence and intends to also be the managing broker of the brokerage. Once she obtains her managing brokers licence, which of the following rights and responsibilities does she have?",
-        choices: ["Donna may employ representatives to work for her brokerage. ",
-            "Each year, Donna must file an accountant's report specifying that she has properly maintained the brokerage's books, accounts and other records.",
-            "The real estate service categories that Donna is permitted to provide will determine the services that her employee representatives are permitted to provide.",
-            "Donna will be responsible for the acts of the brokerage's representatives in carrying out their duties as representatives."],
+        question: `Donna wishes to obtain her brokerage licence and intends to also be the managing broker of the brokerage. Once she obtains her managing brokers licence, which of the following rights and responsibilities does she have?<br>
+            <br>A. Donna may employ representatives to work for her brokerage.
+            <br>B. Each year, Donna must file an accountant's report specifying that she has properly maintained the brokerage's books, accounts and other records.
+            <br>C. The real estate service categories that Donna is permitted to provide will determine the services that her employee representatives are permitted to provide.
+            <br>D. Donna will be responsible for the acts of the brokerage's representatives in carrying out their duties as representatives.`,
+        choices: ["All of the above",
+                "A and C only",
+                "A, B, and D only",
+                "B and C only"],
         correct: 0
     },
     {
