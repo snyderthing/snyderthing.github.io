@@ -29,7 +29,7 @@ Which of the following statements is/are TRUE?<br>
         question: `When Andy gave up surfing, he decided to sell his beachfront bungalow to Bertrand. Shortly afterwards, he was struck with remorse and wanted his bungalow back. Checking the state of title at the land title office, Andy learned that Bertrand had not registered the transfer; he immediately mailed the purchase monies to Bertrand and demanded that he return the premises to Andy. Which of the following statements is/are TRUE?<br>
 
     <br>A.   Under the Land Title Act, a conveyance must be registered in order to be enforceable between the parties to the contract.
-    <br>B.   If, before Bertrand registers the transfer, Andy sells the property to Clara for valuable consideration, (and she is unaware of the earlier sale to Bertrand), and she registers the transfer, she would take title subject to Bertrand’s superior right to the propert
+    <br>B.   If, before Bertrand registers the transfer, Andy sells the property to Clara for valuable consideration, (and she is unaware of the earlier sale to Bertrand), and she registers the transfer, she would take title subject to Bertrand’s superior right to the property
     <br>C.   If Andy completed a second sale with an unsuspecting third party who registered the transfer before Bertrand, Bertrand could lose his interest in the property.
     <br>D.   Bertrand will be able to enforce the contract against Andy.`,
         choices: ["A and B only",
