@@ -57,7 +57,7 @@ const questions = [
         question: "Which of the following statements regarding the Occupiers Liability Act (\"OLA\") is FALSE?",
         choices: ["Under the OLA, the occupier must take such care as in all the circumstances is reasonable to see that visitors coming onto the property will be reasonably safe.",
             "The duty of care owed under the OLA applies to the condition of, the activities occurring on, and the conduct of third parties on the premises.",
-            "An occupier will not owe a duty of care under the OLA to visitors who, with full knowledge of the risks, unequivocally waives their rights to the protection of the Act, other a duty not to intentionally harm or act with reckless disregard towards the visitor or visitor's property.",
+            "An occupier will not owe a duty of care under the OLA to visitors who, with full knowledge of the risks, unequivocally waives their rights to the protection of the Act, other than a duty not to intentionally harm or act with reckless disregard towards the visitor or visitor's property.",
             "The OLA provides injured parties with a statutory remedy against only the registered owner of the unsafe premises."],
         correct: 3
     },
