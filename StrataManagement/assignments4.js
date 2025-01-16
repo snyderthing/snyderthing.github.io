@@ -81,7 +81,8 @@ const questions = [
     },
     {
         // Question 9
-        question: "Jim Young recently lost his job and is finding it difficult to make the mortgage payments on his strata unit. As a result, Jim decides to sell the unit and hires the services of Carol, a trading services licensee. In an effort to make his unit more attractive, Jim immediately starts minor repairs to the premises. Jim is not the most organized handyman and often leaves tools, boards and scrap material lying around. One night, Carol arrives with John and Sarah Middleton, a newly married couple looking for a reasonably priced home. While looking at the unit, Sarah walks down a corridor in the unit and steps on a board full of nails and injures herself.",
+        question: `Jim Young recently lost his job and is finding it difficult to make the mortgage payments on his strata unit. As a result, Jim decides to sell the unit and hires the services of Carol, a trading services licensee. In an effort to make his unit more attractive, Jim immediately starts minor repairs to the premises. Jim is not the most organized handyman and often leaves tools, boards and scrap material lying around. One night, Carol arrives with John and Sarah Middleton, a newly married couple looking for a reasonably priced home. While looking at the unit, Sarah walks down a corridor in the unit and steps on a board full of nails and injures herself. <br>
+        Which of the following is NOT necessary to establish Jim’s liability to Sarah in negligence?`,
         choices: ["Jim did not take the care that a reasonable person would have taken in the circumstances.",
             "It is reasonably foreseeable that a person might step on the board full of nails and suffer injury.",
             "Sarah's actions represented a reasonable use of the corridor.",
