@@ -57,7 +57,7 @@ const questions = [
         question: "Which of the following statements regarding the Occupiers Liability Act (\"OLA\") is FALSE?",
         choices: ["Under the OLA, the occupier must take such care as in all the circumstances is reasonable to see that visitors coming onto the property will be reasonably safe.",
             "The duty of care owed under the OLA applies to the condition of, the activities occurring on, and the conduct of third parties on the premises.",
-            "An occupier will not owe a duty of care under the OLA to visitors who, with full knowledge of the risks, unequivocally waives their rights to the protection of the Act, other a duty not to intentionally harm or act with reckless disregard towards the visitor or visitor's property.",
+            "An occupier will not owe a duty of care under the OLA to visitors who, with full knowledge of the risks, unequivocally waives their rights to the protection of the Act, other than a duty not to intentionally harm or act with reckless disregard towards the visitor or visitor's property.",
             "The OLA provides injured parties with a statutory remedy against only the registered owner of the unsafe premises."],
         correct: 3
     },
@@ -81,7 +81,8 @@ const questions = [
     },
     {
         // Question 9
-        question: "Jim Young recently lost his job and is finding it difficult to make the mortgage payments on his strata unit. As a result, Jim decides to sell the unit and hires the services of Carol, a trading services licensee. In an effort to make his unit more attractive, Jim immediately starts minor repairs to the premises. Jim is not the most organized handyman and often leaves tools, boards and scrap material lying around. One night, Carol arrives with John and Sarah Middleton, a newly married couple looking for a reasonably priced home. While looking at the unit, Sarah walks down a corridor in the unit and steps on a board full of nails and injures herself.",
+        question: `Jim Young recently lost his job and is finding it difficult to make the mortgage payments on his strata unit. As a result, Jim decides to sell the unit and hires the services of Carol, a trading services licensee. In an effort to make his unit more attractive, Jim immediately starts minor repairs to the premises. Jim is not the most organized handyman and often leaves tools, boards and scrap material lying around. One night, Carol arrives with John and Sarah Middleton, a newly married couple looking for a reasonably priced home. While looking at the unit, Sarah walks down a corridor in the unit and steps on a board full of nails and injures herself. <br>
+        Which of the following is NOT necessary to establish Jim’s liability to Sarah in negligence?`,
         choices: ["Jim did not take the care that a reasonable person would have taken in the circumstances.",
             "It is reasonably foreseeable that a person might step on the board full of nails and suffer injury.",
             "Sarah's actions represented a reasonable use of the corridor.",
