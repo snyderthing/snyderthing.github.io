@@ -29,7 +29,7 @@ const questions = [
     {
         // Question 4
         question: `Dorinda rents a shop in a building owned by Muhammad. She operates a fabric art studio and sells crafts there. Which of the following provisions of Dorinda's lease would be enforceable?<br>
-            <br>A. The rent is $1,000 per month and the damage deposit is $3,000.<br>
+            <br>A. The rent is $1,000 per month and the damage deposit is $3,000.
             <br>B. Dorinda agrees not to assign the lease.
             <br>C. The landlord may exercise the remedy of distress.
             <br>D. The lease term expires at the end of one year, and no notice of termination is required.`,
