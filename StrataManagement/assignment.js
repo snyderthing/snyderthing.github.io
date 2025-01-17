@@ -6,26 +6,6 @@
 let currentQuestion = 0;
 let correctAnswers = 0;
 
-/* Select Assignment https://www.javascripttutorial.net/javascript-dom/javascript-select-box/  */
-
-const btn = document.querySelector('#btn');
-const sb = document.querySelector('#assignment')
-/*
-btn.onclick = (event) => {
-    event.preventDefault();
-    // show the selected index
-    alert(sb.selectedIndex);
-};
-*/
-// btn.onclick - change src of javascript
-btn.onclick = (event) => {
-    event.preventDefault();
-    document.getElementById('assignmentNumber').src = sb.value;
-    console.log(sb.value);
-};
-
-/* End Select Assignment */
-
 function showQuestion() {
     const questionText = document.getElementById("question-text");
     questionText.innerHTML = questions[currentQuestion].question;
