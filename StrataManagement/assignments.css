@@ -62,6 +62,11 @@ nav {
     margin-bottom: 2em;
 }
 
+button {
+    font-size: 1.5em;
+    padding: .5em .75em;
+}
+
 /* ===============================
     Desktop Only Rule
    ===============================
