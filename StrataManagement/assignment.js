@@ -54,4 +54,4 @@ function nextQuestion() {
     }
 }
 
-showQuestion();
+// showQuestion();
