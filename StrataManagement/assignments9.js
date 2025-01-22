@@ -128,7 +128,7 @@ const questions = [
     {
         // Question 15
         question: "Jeremy is a prospective purchaser who is seeking to purchase a strata lot located in a strata property called Pacific Palace which is owned by Sarah. Jeremy requests a Certificate of Payment from the Pacific Palace strata corporation. In response, the strata corporation must:",
-        choices: ["",
+        choices: ["comply with the request within two weeks, so long as Sarah does not owe money to the strata corporation.",
         "comply with the request within 10 days, so long as Sarah has agreed to pay disputed funds, which the strata corporation alleges she owes, into court.",
         "include claims against the owner that are pending in court, an arbitration panel, or the Civil Resolution Tribunal on the Certificate of Payment.",
         "not charge Jeremy a fee of more than the amount that is prescribed in the Strata Property Regulation in order to process the request for the Certificate of Payment."],
