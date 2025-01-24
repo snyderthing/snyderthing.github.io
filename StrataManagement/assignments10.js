@@ -27,7 +27,7 @@ const questions = [
                 <br>D. Copies of all personal property insurance policies held by each lot owner`,
         choices: ["A and B only",
             "A, B, and C only",
-            "A, B, and C only",
+            "A, B, and D only",
             "All of the above"],
         correct: 1
     },
