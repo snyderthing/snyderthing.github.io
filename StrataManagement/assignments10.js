@@ -27,7 +27,7 @@ const questions = [
                 <br>D. Copies of all personal property insurance policies held by each lot owner`,
         choices: ["A and B only",
             "A, B, and C only",
-            "A, B, and C only",
+            "A, B, and D only",
             "All of the above"],
         correct: 1
     },
@@ -184,7 +184,7 @@ const questions = [
     {
         // Question 19
         question: "With respect to the bylaws of a strata corporation, which of the following is FALSE?",
-        choices: ["A strata corporation’s bylaws are the Standard Bylaws appended to the Strata Property Act<éem>, except to the extent that different bylaws are approved by the strata corporation and filed in the land title office.",
+        choices: ["A strata corporation’s bylaws are the Standard Bylaws appended to the Strata Property Act, except to the extent that different bylaws are approved by the strata corporation and filed in the land title office.",
             "A strata corporation’s bylaws may differ from the Standard Bylaws where an owner/developer deposits a strata plan that contains different bylaws.",
             "The Standard Bylaws require that all strata corporations must have a strata council with at least three members and not more than seven members.",
             "The Standard Bylaws set out the minimum remuneration for strata council members."],
