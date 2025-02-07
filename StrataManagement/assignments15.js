@@ -59,7 +59,7 @@ const questions = [
         choices: ["Owners and tenants should be prohibited from operating trash compactors due to the potential liability risk.",
         "Maintenance crews should periodically check catch basins when snow is thawing to avoid flooding.",
         "Maintenance crews should respond to reports or complaints of damage or malfunction as soon as possible.",
-        "Frozen water lines, broken fan felts, and broken windows all fall under the routine maintenance category."],
+        "Frozen water lines, broken fan belts, and broken windows all fall under the routine maintenance category."],
         correct: 3
     },
     {
