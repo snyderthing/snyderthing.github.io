@@ -187,10 +187,10 @@ function setBackground(e) {
     // Set the background based on the keyboard key
     if (e.shiftKey) {
         cellBackground = "rgb(233, 207, 29)";
-        cursorType = "url(jpf_eraser.png), cell";
+        cursorType = "url(jpf_eraser.png) 5 5, cell";
     }   else if (e.altKey) {
         cellBackground = "rgb(255, 255, 255)";
-        cursorType = "url(jpf_cross.png), crosshair";
+        cursorType = "url(jpf_cross.png) 14 14, crosshair";
     }   else {
         cellBackground = "rgb(101, 101, 101)";
         cursorType = "url(jpf_pencil.png), pointer";
