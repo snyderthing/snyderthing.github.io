@@ -1,47 +1,28 @@
+* {
+    box-sizing: border-box;
+}
 html {
-    background-color: lightslategrey;
+    background-color: azure;
     height: 100%;
 }
+
 body {
-    background-color: teal;
-    margin: 0px auto;
-    max-width: 960px;
+    background-color: black;
+    color:burlywood;
     height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 7px;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+
+h2 {
+    margin-top: 0;
 }
-li {
-    float: left;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
+
+a {
     text-decoration: none;
 }
-li a:hover {
-    background-color: #111111;
-}
-table.table1 {
-    width: 300px; 
-}
-th.table1, td.table1 {
-    border-bottom: 1px solid #DDD;
-    padding-left: 4px;
-    /* background-color: aliceblue;*/
-}
 
-tr.table1 {
-    background-color: aliceblue;
-}
-
-tr.table1:hover {
-    background-color: blue;
-    color: aliceblue;
+a:link, a:visited, a:active {
+    color: cadetblue;
 }
