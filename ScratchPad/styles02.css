@@ -2,8 +2,18 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    background-color: darkcyan;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border: 1px solid white;
+    background-color: cornflowerblue;
 }
 
 /* Style the header */
@@ -21,6 +31,15 @@ section {
     display: flex;
 }
 
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
 /* Style the list inside the menu */
 nav ul {
     list-style-type: none;
@@ -31,9 +50,17 @@ nav ul {
 article {
     -webkit-flex: 3;
     -ms-flex: 3;
-    flex: 3;
-    background-color: f1f1f1;
+    flex: 3; /* flex grow is three */
+    background-color: #f1f1f1;
     padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
 }
 
 a {
@@ -42,4 +69,12 @@ a {
 
 a:link, a:visited, a:active {
     color: cadetblue;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
 }
