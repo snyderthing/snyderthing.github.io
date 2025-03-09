@@ -1,0 +1,38 @@
+html {
+    height:"100%";
+    background-color: cadetblue;
+}
+
+body {
+    min-height: 100%;
+    background-color: rgb(100, 149, 237);
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    display: block;
+    width: 100%;
+}
+
+nav li {
+    width: 25%;
+    display: block;
+    float: left;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+a:hover, a:active {
+    background-color: cadetblue;
+}
+
+.catImages {
+    height: 130px;
+}
