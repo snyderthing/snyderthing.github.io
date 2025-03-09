@@ -17,6 +17,7 @@ div.row::after {
 
 div[class^="col-"] {
     float: left;
+    padding: 4px;
 }
 
 div.col-1-1 {width: 100%}
