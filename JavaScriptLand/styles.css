@@ -26,11 +26,17 @@ body {
     padding-right: 2vw; */
     padding: 1vw 2vw 1em 2vw;
     box-sizing: border-box;
+}
 
+body > header > nav li {
+    width: 25%;
+    display: block;
+    float: left;
 }
 
 h2 {
-    margin-top: 1vh;
+    padding-top: 2vh;
+    clear: left;
 }
 
 form {
