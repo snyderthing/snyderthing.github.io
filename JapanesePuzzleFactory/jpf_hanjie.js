@@ -54,7 +54,59 @@
 	
 */
 
+// Run the init() function when page loads
+window.onload = init;
 
+function init() {
+   // Insert the title for the first puzzle
+   document.getElementById("puzzleTitle").innerHTML = "Puzzle 1";
+
+   // Insert the HTML code for the first puzzle table
+   document.getElementById("puzzle").innerHTML = drawPuzzle(puzzle1Hint, puzzle1Rating, puzzle1);
+
+   // Add event handlers for the puzzle buttons.
+   // Because each of the three buttons belongs to the object
+   // class "puzzles", you can add the same event handler by
+   // looping through each object in the puzzleButtons collection
+   var puzzleButtons = document.getElementsByClassName("puzzles");
+   for (var i = 0; i < puzzleButtons.length; i++) {
+      puzzleButtons[i].onclick = swapPuzzle;
+   }
+}
+
+function swapPuzzle(e) {
+   // To determine which of the three puzzle buttons initiated
+   // the click event, use the target property that identifies
+   // the source of the event. The target property returns a 
+   // reference to the button that was clicked by the user.
+   // To reference the button's ID,
+   // add the id property to the expression.
+   var puzzleID = e.target.id;
+   // You can use either 'this' (var puzzleID = this.id;) or
+   // reference the owner of the event.
+
+   // Extract the title of the puzzle from the value attribute
+   // in the puzzle buttons
+   var puzzleTitle = e.target.value;
+   document.getElementById("puzzleTitle").innerHTML = puzzleTitle;
+
+   // The switch statement calls the drawPuzzle() function for each
+   // of the three possible puzzle ID values
+   switch (puzzleID) {
+      case "puzzle1":
+         document.getElementById("puzzle").innerHTML =
+            drawPuzzle(puzzle1Hint, puzzle1Rating, puzzle1);
+         break;
+      case "puzzle2":
+         document.getElementById("puzzle").innerHTML =
+         drawPuzzle(puzzle2Hint, puzzle2Rating, puzzle2);
+         break;
+      case "puzzle3":
+         document.getElementById("puzzle").innerHTML =
+            drawPuzzle(puzzle3Hint, puzzle3Rating, puzzle3);
+         break;
+   }
+}
 
 
 
@@ -98,7 +150,6 @@ function drawPuzzle(hint, rating, puzzle) {
             } 
          }    
       }
-
    }
 
    /* Loop through the columns to create the colCount array

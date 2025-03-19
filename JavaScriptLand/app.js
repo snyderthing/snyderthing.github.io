@@ -1,11 +1,11 @@
 console.log("Hello from app.js!");
-/*
-let age = prompt("How old are you?");
-age = parseInt(age);
-if (age === 57) {
-    alert("Good age, man!");
-}
-*/
+
+// let age = prompt("How old are you?");
+// age = parseInt(age);
+// if (age === 57) {
+//     alert("Good age, man!");
+// }
+
 
 
 /* let random = Math.random();
@@ -36,7 +36,6 @@ function getColor(phrase){
 
 getColor(phrase);
  */
-
 
 
 

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Land</title>
+    <title>Events</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="app.js" defer></script>
+    <script src="events.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,6 +21,24 @@
         </nav>
     </header>
     <h2>Greetings.</h2>
+    <button onclick="myFunction(evt)">Click</button>
+    <div onclick="console.log(event)">Click me!</div>
+<!-- The synthesized handler has a name; you can reference itself -->
+    <div onclick="console.log(onclick)">Click me!</div>
+    <button onclick="bgChange()">Press me</button>
+
+    <div onmousedown="WhichButton(event)" style="border:1px solid black;padding:8px">
+        <p>Click in this box with one of your mouse buttons!"</p>
+        <p>
+            0 = The left mouse button<br>
+            1 = The middle mouse button<br>
+            2 = The right mouse button
+        </p>
+    </div>
+    
+    <p id="demo"></p>
+
+
     <footer><a target="_blank" href="https://icons8.com/icon/laVIsJnTtYoj/javascript-logo">Javascript</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></footer>
 </body>
 </html>

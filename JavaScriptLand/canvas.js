@@ -123,3 +123,18 @@ otx.beginPath();
 otx.moveTo(20, 20);
 otx.bezierCurveTo(110, 150, 180, 10, 210, 140);
 otx.stroke();
+
+// Radial gradient
+const p = document.getElementById("myCanvas14");
+const ptx = p.getContext("2d");
+
+// Create gradient
+const grad = ptx.createRadialGradient(150, 75, 15, 150, 75, 150);
+grad.addColorStop(0, "lightblue");
+grad.addColorStop(0.3, "pink");
+grad.addColorStop(1, "darkblue");
+
+// Fill rectangle with gradient
+ptx.fillStyle = grad;
+ptx.fillRect(10, 10, 280, 130);
+
