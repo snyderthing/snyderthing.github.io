@@ -57,6 +57,7 @@
 // Run the init() function when page loads
 window.onload = init;
 
+var puzzleCells;
 function init() {
    // Insert the title for the first puzzle
    document.getElementById("puzzleTitle").innerHTML = "Puzzle 1";
@@ -72,6 +73,8 @@ function init() {
    for (var i = 0; i < puzzleButtons.length; i++) {
       puzzleButtons[i].onclick = swapPuzzle;
    }
+
+   setupPuzzle();
 }
 
 function swapPuzzle(e) {
@@ -106,9 +109,19 @@ function swapPuzzle(e) {
             drawPuzzle(puzzle3Hint, puzzle3Rating, puzzle3);
          break;
    }
+
+   setupPuzzle();
 }
 
+function setupPuzzle() {
+   /* Match all of the data cells in the puzzle */
+   puzzleCells = document.querySelectorAll("table#hanjieGrid td");
 
+   /* Set the initial color of each cell to gold */
+   for (var i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].style.backgroundColor = "rgb(233, 207, 29)";
+   }
+}
 
 
          

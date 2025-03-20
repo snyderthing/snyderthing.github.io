@@ -37,6 +37,16 @@ function getColor(phrase){
 getColor(phrase);
  */
 
+// Set firstName field
+document.getElementById("firstName").value = "Elmo";
 
+// Set radio button value to CSS
+document.getElementById("javascript").checked = true;
+
+function setup() {
+    console.log("The setup function ran because the page was loaded by the browser.");
+}
+
+window.onload = setup;
 
 console.log("Goodbye.");
