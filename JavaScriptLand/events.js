@@ -64,8 +64,23 @@ function changePhoto() {
 document.querySelector("#duck").addEventListener("click", changePhoto);
 
 /* Provide JavaScript code to change the font family of the first h1 heading in the document to Arial. */
+function changeH1Font() {
+    document.querySelector("h1").style.fontFamily = "Arial";
+}
+document.querySelector("#fontChange").onclick = changeH1Font;
 
 /* Provide the expression to create an object collection of all objects referenced by the CSS selector div#intro p. */
+function displayParagraphs() {
+    const paragraphs = document.querySelectorAll("div#intro p");
+    console.log(paragraphs.length);
+}
+
+document.querySelector("#pCounter").addEventListener("click", displayParagraphs);
 
 /* Provide the expression to return only the first paragraph referenced by the CSS selector div#intro p. */
 
+function showParagraph1() {
+    const paragraph = document.querySelector("div#intro p");
+    console.log(paragraph.innerHTML);
+}
+document.querySelector("#firstParagraph").addEventListener("click", showParagraph1);
