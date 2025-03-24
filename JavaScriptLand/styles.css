@@ -54,6 +54,15 @@ td {
     padding-right: 1em;
 }
 
+div#entrance, div#exit, div#preventDefaultFail {
+    height: 15vh;
+    width: 20vw;
+    background-color:#525B44;
+    color: white;
+    margin: 2vh 2vw;
+    display: inline-block;
+}
+
 footer {
     position: fixed;
     bottom: 0;

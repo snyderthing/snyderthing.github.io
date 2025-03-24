@@ -77,6 +77,9 @@ function init() {
    }
 
    setupPuzzle();
+
+   // Add an event listener for the mouseup event.
+   document.addEventListener("mouseup", endBackground);
 }
 
 function swapPuzzle(e) {
@@ -139,6 +142,13 @@ function setBackground(e) {
 
 function extendBackground(e) {
    e.target.style.backgroundColor = cellBackground;
+}
+
+function endBackground() {
+   // Remove the event listener for every puzzle cell.
+   for (var i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].removeEventListener("mouseenter", extendBackground);
+   }
 }
          
 /* ================================================================= */

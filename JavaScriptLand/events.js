@@ -92,3 +92,31 @@ function trackPointer(e) {
     var vPos = e.clientY;
     document.getElementById("imgLoc").innerText = " (" + hPos + ", " + vPos + ")";
 }
+
+/* Add and remove an event listener.
+Add it when one moves the mouse over the first div and remove it when 
+moving the mouse over the second div.
+
+*/
+document.querySelector("#entrance").addEventListener("mouseenter", colorChange);
+function colorChange(e) {
+    e.target.style.backgroundColor = "#85A98F";
+    e.target.style.color = "#525B44";
+}
+
+document.querySelector("#exit").addEventListener("mouseenter", colorRestore);
+function colorRestore(e) {
+    removeEventListener("mouseenter", colorChange);
+    document.querySelector("#entrance").style.backgroundColor = "#525B44";
+    document.querySelector("#entrance").style.color = "white";
+}
+
+/*
+Use "preventDefault() on one submit button, but not on the other."
+*/
+document.querySelector("input[type='submit']").onclick = myFunction1;
+function myFunction1(e) {
+    e.preventDefault();
+    console.log("Fail");
+}
+
