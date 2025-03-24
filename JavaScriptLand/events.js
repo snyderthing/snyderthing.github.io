@@ -84,3 +84,11 @@ function showParagraph1() {
     console.log(paragraph.innerHTML);
 }
 document.querySelector("#firstParagraph").addEventListener("click", showParagraph1);
+
+document.getElementById("duck").onmousemove = trackPointer;
+
+function trackPointer(e) {
+    var hPos = e.clientX;
+    var vPos = e.clientY;
+    document.getElementById("imgLoc").innerText = " (" + hPos + ", " + vPos + ")";
+}

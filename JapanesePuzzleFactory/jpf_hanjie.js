@@ -58,6 +58,8 @@
 window.onload = init;
 
 var puzzleCells;
+var cellBackground;
+
 function init() {
    // Insert the title for the first puzzle
    document.getElementById("puzzleTitle").innerHTML = "Puzzle 1";
@@ -120,10 +122,24 @@ function setupPuzzle() {
    /* Set the initial color of each cell to gold */
    for (var i = 0; i < puzzleCells.length; i++) {
       puzzleCells[i].style.backgroundColor = "rgb(233, 207, 29)";
+      // Set the cell background color in response to the mousedown event
+      puzzleCells[i].onmousedown = setBackground;
    }
 }
 
+function setBackground(e) {
+   cellBackground = "rgb(101, 101, 101)";
+   e.target.style.backgroundColor = cellBackground;
 
+   // Create an event listener for every puzzle cell
+   for (var i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].addEventListener("mouseenter", extendBackground);
+   }
+}
+
+function extendBackground(e) {
+   e.target.style.backgroundColor = cellBackground;
+}
          
 /* ================================================================= */
 
