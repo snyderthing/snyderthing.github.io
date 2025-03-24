@@ -59,17 +59,52 @@
     <button id="firstParagraph">Paragraph #1</button>
     <table>
         <tr>
-            <th><code><i>evt</i>.button</code></th>
-            <th><code><i>evt</i>.buttons</code></th>
-            <th><code><i>evt</i>.clientX</code></th>
-            <th><code><i>evt</i>.clientY</code></th>
-            <th><code><i>evt</i>.detail</code></th>
-            <th><code><i>evt</i>.pageX</code></th>
-            <th><code><i>evt</i>.pageY</code></th>
-            <th><code><i>evt</i>.relatedTarget</code></th>
-            <th><code><i>evt</i>.screenX</code></th>
-            <th><code><i>evt</i>.screenY</code></th>
-            <th><code><i>evt</i>.which</code></th>
+            <th>Event Property</th>
+            <th>Description</th>
+        </tr>        
+        <tr>
+            <td><code><i>evt</i>.button</code></td>
+            <td>Returns a number indicating the mouse button that was pressed, where 0 = left, 1 = wheel or middle, and 2 = right and <i>evt</i> is event object for the mouse event.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.buttons</code></td>
+            <td>Returns a number indicating the mouse button or buttons that were pressed, where 1 = left, 2 = right, 4 = wheel or middle, 8 = back, 16 = forward, and other multiple buttons are indicated by the sum of their numbers.</td>
+        </tr>
+        <tr>    
+            <td><code><i>evt</i>.clientX</code></td>
+            <td>Returns the horizontal coordinate (in pixels) of the mouse pointer relative to the browser window.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.clientY</code></td>
+            <td>Returns the verticle coordinate (in pixels) of the mouse pointer relative to the browser window.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.detail</code></td>
+            <td>Returns the number of times the mouse button was clicked.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.pageX</code></td>
+            <td>Returns the horizontal coordinate (in pixels) of the mouse pointer relative to the document.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.pageY</code></td>
+            <td>Returns the verticle coordinate (in pixels) of the mouse pointer relative to the document.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.relatedTarget</code></td>
+            <td>References the secondary target of the event; for the <code>mouseover</code> event this is the element that the pointer is leaving and for the <code>mouseout</code> event this is the element that the pointer is entering.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.screenX</code></td>
+            <td>Returns the horizontal coordinate (in pixels) of the mouse pointer relative to the physical screen.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.screenY</code></td>
+            <td>Returns the verticle coordinate (in pixels) of the mouse pointer relative to the physical screen.</td>
+        </tr>
+        <tr>
+            <td><code><i>evt</i>.which</code></td>
+            <td>Returns a number indicating the mouse button that was pressed, where 0 = none, 1 = left, 2 = wheel or middle, and 3 = right.</td>
         </tr>
     </table>
     <p>Tables and responsive design - page 474</p>
