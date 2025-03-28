@@ -58,7 +58,7 @@
             <legend>Customer Information</legend>
             <div class="formRow">
                <label for="name">Name*</label>
-               <input name="custName" id="name" type="text" autocomplete="false" placeholder="first and last name" />
+               <input name="custName" id="name" type="text" autocomplete="false" placeholder="first and last name" required />
             </div>
             
             <div class="formRow">
@@ -78,17 +78,19 @@
             
             <div class="formRow">
                <label for="zip">Postal code</label>
-               <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
+               <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" 
+               pattern="^\d{5}(-\d{4})?$"/>
             </div>
             
             <div class="formRow">
                <label for="phone">Phone number</label>
-               <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+               <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" 
+               pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
             </div>
             
             <div class="formRow">
                <label for="mail">E-mail*</label>
-               <input name="custEmail" id="mail" type="email" accesskey="1" />
+               <input name="custEmail" id="mail" type="email" accesskey="1" required />
             </div>
 
             <div class="formRow">
@@ -192,13 +194,7 @@
             <input type="reset" value="Cancel" />
          </div>
 
-         <div class="formRow">
-            <button type="submit">
-               <img src="orderImg.png" alt="" />
-               <p>Place your order now</p>
-            </button>
-         </div>
-         
+        
       </form>
      
    </section>
