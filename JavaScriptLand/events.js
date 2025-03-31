@@ -2,7 +2,9 @@ function quack() {
     console.log("quack");
 }
 
-window.onload = quack;
+// window.onload = quack;
+// window.onload = setForm;
+/* https://www.htmlgoodies.com/javascript/using-multiple-javascript-onload-functions/ */
 
 const myBtn = document.querySelector("button");
 
@@ -114,6 +116,16 @@ function colorRestore(e) {
 /*
 Use "preventDefault() on one submit button, but not on the other."
 */
+
+function setForm() {
+    document.forms[0].onsubmit = function () {
+        console.log("setForm has been run.");
+        if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
+        return false;
+    }
+}
+
+
 document.querySelector("input[type='submit']").onclick = myFunction1;
 function myFunction1(e) {
     e.preventDefault();
