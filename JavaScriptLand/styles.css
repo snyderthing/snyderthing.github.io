@@ -54,9 +54,16 @@ td {
     padding-right: 1em;
 }
 
-div#entrance, div#exit, div#preventDefaultFail {
-    height: 15vh;
+div#entrance, div#exit {
+    height: 30vh;
     width: 20vw;
+    background-color:#525B44;
+    color: white;
+    margin: 2vh 2vw;
+    display: inline-block;
+}
+
+div#preventDefaultFail {
     background-color:#525B44;
     color: white;
     margin: 2vh 2vw;

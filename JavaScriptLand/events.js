@@ -1,8 +1,26 @@
 function quack() {
     console.log("quack");
+    document.forms[1].onsubmit = function () {
+        if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
+        return false;
+    }
 }
 
 window.onload = quack;
+
+
+/*
+
+window.onload = setForm;
+
+function setForm() {
+   document.forms[0].onsubmit = function() {
+      if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
+      return false;
+   }
+}
+
+*/
 
 const myBtn = document.querySelector("button");
 
@@ -115,8 +133,8 @@ function colorRestore(e) {
 Use "preventDefault() on one submit button, but not on the other."
 */
 document.querySelector("input[type='submit']").onclick = myFunction1;
+
 function myFunction1(e) {
     e.preventDefault();
     console.log("Fail");
 }
-
