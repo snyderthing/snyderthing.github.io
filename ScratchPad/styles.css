@@ -26,3 +26,9 @@ a {
 a:link, a:visited, a:active {
     color: cadetblue;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
