@@ -75,9 +75,16 @@ Provide code to reference the data-* attributes for the following HTML element:
             
             <div id="report" data-title="Earnings Report"
                 data-author="Sam Browne" 
-                data-report-data="2018-07-01">
+                data-report-date="2018-07-01">
                 ...
             </div>
 
 */
-
+document.querySelector("#getData").addEventListener("click", function () {
+    const report = document.querySelector("#report");
+    const title = report.dataset.title;
+    const author = report.dataset.author;
+    const day = new Date(report.dataset.reportDate);
+    const dateStr = day.toLocaleDateString();
+    console.log(title, author, dateStr);
+});
