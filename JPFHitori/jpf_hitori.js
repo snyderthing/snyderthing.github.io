@@ -71,14 +71,60 @@ function startUp() {
    document.querySelector("#solve").onclick = showSolution;
 }
 
+/* Switches the page between the three possible Hitori puzzles. */
+function switchPuzzle(e) {
+   if (confirm("Your work will be lost if you switch puzzles! Continue?")) {
+      const puzzleID = e.target.id;
+      document.querySelector("#puzzleTitle").innerHTML = e.target.value;
 
+      switch (puzzleID) {
+         case "puzzle1":
+            document.getElementById("puzzle").innerHTML = drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
+            break;
+         case "puzzle2":
+            document.getElementById("puzzle").innerHTML = drawHitori(hitori2Numbers, hitori2Blocks, hitori2Rating);
+            break;
+         case "puzzle3":
+            document.getElementById("puzzle").innerHTML = drawHitori(hitori3Numbers, hitori3Blocks, hitori3Rating);
+            break;
+      }
 
+      setupPuzzle();
+   }
+}
 
-
-
-
-
+function setupPuzzle() {
+   allCells = document.querySelectorAll("table#hitoriGrid td");
+   for (let i = 0; i < allCells.length; i++) {
+      allCells[i].style.backgroundColor = "white";
+      allCells[i].style.color = "black";
+      allCells[i].style.borderRadius = "0";
+      allCells[i].addEventListener("mousedown", function (evt) {
          
+         if (evt.shiftKey) {
+            allCells[i].style.backgroundColor = "white";
+            allCells[i].style.color = "black";
+            allCells[i].style.borderRadius = "0";
+         } else if (evt.altKey) {
+            allCells[i].style.backgroundColor = "black";
+            allCells[i].style.color = "white";
+            allCells[i].style.borderRadius = "0";
+         } else {
+            allCells[i].style.backgroundColor = "rgb(101, 101, 101)";
+            allCells[i].style.color = "white";
+            allCells[i].style.borderRadius = "50%";
+         }
+
+         // Prevent the default action of selecting table text
+         evt.preventDefault();
+      });
+   }
+}
+
+
+
+
+
 /* ================================================================= */
 
 function checkSolution() {
@@ -94,8 +140,8 @@ function checkSolution() {
 
       /* A cell is incorrect if it is in the block class and is not black
          or in the circle class and is not white */
-      if ( (cellClass == "blocks" && cellColor !== "black") || 
-           (cellClass == "circles" && cellColor !== "rgb(101, 101, 101)")) {
+      if ((cellClass == "blocks" && cellColor !== "black") ||
+         (cellClass == "circles" && cellColor !== "rgb(101, 101, 101)")) {
          solved = false;
          break;
       }
@@ -105,12 +151,12 @@ function checkSolution() {
    if (solved) alert("Congratulations! You solved the puzzle!");
 }
 
-function showSolution () {
+function showSolution() {
    for (var i = 0; i < allCells.length; i++) {
       allCells[i].style.color = "";
       allCells[i].style.backgroundColor = "";
       allCells[i].style.borderRadius = "";
-   };   
+   };
 }
 
 function drawHitori(numbers, blocks, rating) {
@@ -134,7 +180,7 @@ function drawHitori(numbers, blocks, rating) {
    var totalCols = numbers[0].length;
    htmlString = "<table id='hitoriGrid'>";
    htmlString += "<caption>" + rating + "</caption>";
-   
+
 
    for (var i = 0; i < totalRows; i++) {
       htmlString += "<tr>";
@@ -144,7 +190,7 @@ function drawHitori(numbers, blocks, rating) {
          else htmlString += "<td class='circles'>";
 
          htmlString += numbers[i][j];
-         htmlString +="</td>";
+         htmlString += "</td>";
       }
 
       htmlString += "</tr>";
