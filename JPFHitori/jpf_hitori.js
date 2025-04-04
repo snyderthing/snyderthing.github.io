@@ -105,7 +105,7 @@ function setupPuzzle() {
             allCells[i].style.backgroundColor = "white";
             allCells[i].style.color = "black";
             allCells[i].style.borderRadius = "0";
-         } else if (evt.altKey) {g
+         } else if (evt.altKey) {
             allCells[i].style.backgroundColor = "black";
             allCells[i].style.color = "white";
             allCells[i].style.borderRadius = "0";
@@ -125,8 +125,8 @@ function setupPuzzle() {
          <div id="inner"></div>
       </div>
       If you create a mouseenter event listener for the outer div element, the event will be triggered
-      only for the outer dive element. This is because the mouseenter event does not bubble through the 
-      object hierarchy. On the other hand, the mouseover even does bubble and thus will be fired when the 
+      only for the outer div element. This is because the mouseenter event does not bubble through the 
+      object hierarchy. On the other hand, the mouseover event does bubble and thus will be fired when the 
       pointer enters either outer div element or inner div elements. Unless you want the event triggered 
       for an element and all its descendants, you should listen only for the mouseenter event.
       */
@@ -142,7 +142,7 @@ function setupPuzzle() {
          }
       });
 
-      allCells[i].addEventListener("mouseup", checkSolution());
+      allCells[i].addEventListener("mouseup", checkSolution);
    }
 }
 
@@ -153,6 +153,14 @@ function findErrors() {
          allCells[i].style.color = "red";
       }
    }
+
+   setTimeout(function () {
+      for (let i = 0; i < allCells.length; i++) {
+         if (allCells[i].style.color === "red") {
+            allCells[i].style.color = "white";
+         }
+      }
+   },1000);
 }
 
 
