@@ -105,7 +105,7 @@ function setupPuzzle() {
             allCells[i].style.backgroundColor = "white";
             allCells[i].style.color = "black";
             allCells[i].style.borderRadius = "0";
-         } else if (evt.altKey) {
+         } else if (evt.altKey) {g
             allCells[i].style.backgroundColor = "black";
             allCells[i].style.color = "white";
             allCells[i].style.borderRadius = "0";
