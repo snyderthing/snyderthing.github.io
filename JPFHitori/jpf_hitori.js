@@ -117,11 +117,43 @@ function setupPuzzle() {
 
          // Prevent the default action of selecting table text
          evt.preventDefault();
+
+         
       });
+      /*
+      <div id="outer">
+         <div id="inner"></div>
+      </div>
+      If you create a mouseenter event listener for the outer div element, the event will be triggered
+      only for the outer dive element. This is because the mouseenter event does not bubble through the 
+      object hierarchy. On the other hand, the mouseover even does bubble and thus will be fired when the 
+      pointer enters either outer div element or inner div elements. Unless you want the event triggered 
+      for an element and all its descendants, you should listen only for the mouseenter event.
+      */
+      // Change the cursor
+      allCells[i].addEventListener("mouseover", function (evt) {
+         // change to jpf_eraser.png or the generic cursor named "alias" if the user is pressing the Shift key
+         if (evt.shiftKey) {
+            allCells[i].style.cursor = "url(jpf_eraser.png), alias";
+         } else if (evt.altKey) {
+            allCells[i].style.cursor = "url(jpf_block.png), cell";
+         } else {
+            allCells[i].style.cursor = "url(jpf_circle.png), pointer";
+         }
+      });
+
+      allCells[i].addEventListener("mouseup", checkSolution());
    }
 }
 
-
+function findErrors() {
+   for (let i = 0; i < allCells.length; i++) {
+      if (allCells[i].className === "blocks" && allCells[i].style.backgroundColor === "rgb(101, 101, 101)"
+         || allCells[i].className === "circles" && allCells[i].style.backgroundColor === "black") {
+         allCells[i].style.color = "red";
+      }
+   }
+}
 
 
 
@@ -130,7 +162,6 @@ function setupPuzzle() {
 function checkSolution() {
    /* Set the initial solved state of the puzzle to true */
    var solved = true;
-   console.log("checkSolution() ran.");
    /* Loop through the puzzle cells, exiting when an incorrect
       cell is found, setting the solved variable to false */
 
