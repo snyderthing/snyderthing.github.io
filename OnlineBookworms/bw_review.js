@@ -100,7 +100,7 @@ function lightStars(evt) {
     // the mouseleave event.
     evt.target.addEventListener("click", function () {
         // function removes the turnOffStars() function
-        evt.target.removeEventListener("mouseenter", turnOffStars);
+        evt.target.removeEventListener("mouseleave", turnOffStars);
     });
 }
     
