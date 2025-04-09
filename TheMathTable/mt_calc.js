@@ -72,12 +72,66 @@ function buttonClick(event) {
    //         value returned by the lastEq() function using calcValue as the parameter value.
    //    v.   Otherwise, append the calculator button character to the calculator window by letting,
    //         calcValue equal calcValue plus buttonValue.
+   switch (buttonValue) {
+      case "del":
+         calcValue = "";
+         break;
+      case "bksp":
+         calcValue = eraseChar(calcValue);
+         break;
+      case "enter":
+         calcValue = " = " + evalEq(calcValue, calcDecimal) + "\n";
+         break;
+      case "prev":
+         calcValue = lastEq(calcValue);
+         break;
+      default:
+         calcValue += buttonValue;
+         break;
+   }
+
    // e. After the switch-case structure, set the value attribute of the calcWindow text area box to calcValue.
-   // f. Run the command document.getElementById("calcWindow").focus() to put the cursor 
+   document.getElementById("calcWindow").value = calcValue;
+   // f. Run the command document.getElementById("calcWindow").focus() to put the cursor
    //    focus within the calculator window.
+   document.getElementById("calcWindow").focus();
 }
 
-// 6. Next...
+// 6. Next, you will control the keyboard actions within the calculator window. Theresa wants you
+// to program the actions that will happen when the user pressed the Delete, Enter, and up arrow keys.
+// Add the calcKeys() function containing the following commands:
+function calcKeys(event) {
+   // a. As you did in the buttonClick() function function, declare the calValue and calcDecimal variables.
+   let calcValue = document.querySelector("#calcWindow").value;
+   let calcDecimal = document.querySelector("#decimals").value;
+   const keyValue = event.key;
+   // b. Create a switch-case structure for different values of the key attribute of the event objects as follows:
+   switch (keyValue) {
+   //    i.   For "Delete", erase the contents of the calculator window by changing calcValue to an empty text string.
+      case "Delete":
+         calcValue = "";
+         break;
+   //    ii.  For "Enter", add the following expression to calcValue:
+      //             " = " + evalEq(calcValue, calcDecimal)
+      case "Enter":
+         calcValue += " = " + evalEq(calcValue, calcDecimal) + "\n";
+         // Prevent browser from skipping a line
+         event.preventDefault();
+         break;
+   //    iii. For "ArrowUp", add the following expression to calcValue
+      //             lastEq(calcWindow.value)
+      case "ArrowUp":
+         calcValue += lastEq(calcValue);
+         //    iv.  And then enter a command that prevents the browser from performing the default action in
+         // response to the user pressing the up-arrow key.      
+         // Prevent browser from moving up page.
+         event.preventDefault();
+         break;
+   }
+         // c. After the switch-case structure, set the value attribute of the calcWindow text area box to calcValue.
+   document.querySelector("#calcWindow").value = calcValue;
+}
+   // 7. Document...
 
 /* ===================================================================== */
 
