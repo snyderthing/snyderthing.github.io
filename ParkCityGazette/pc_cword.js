@@ -7,8 +7,8 @@
 
    Crossword Puzzle Script
    
-   Author: Hesbon Osoro
-   Date: 12/10/22  
+   Author: 
+   Date:  
    
    Global Variables
    ================
@@ -51,8 +51,33 @@
 
 /* Global variables */
 
+let allLetters;
+let currentLetter;
+let wordLetters;
+let acrossClue;
+let downClue;
+let TypeDirection = "right";
+
+window.onload = init;
+
 /* Function List */
 
+function init() {
+   allLetters = document.querySelectorAll("table#crossword span");
+   currentLetter = allLetters[0];
+   // Declare the acrossID variable, setting its value equal to the value of 
+   // the data-clue-a attribute for currentLetter. Declare the downID variable,
+   // setting its value equal to the value of the data-clue-d attribute for currentLetter
+   let acrossID = currentLetter.dataset.clueA;
+   let downID = currentLetter.dataset.clueD;
+
+// Set the value of acrossClue to reference the element with the id attribute "acrossID". 
+// Set the value of downClue to reference the element with the id attribute "downID".
+   acrossClue = acrossID;
+   downClue = downID;
+}
+
+/*
   document.onkeydown = selectLetter;
 
   document.getElementById("directionImg").onclick = switchTypeDirection;
@@ -73,8 +98,7 @@
       allLetters[i].textContent = allLetters[i].dataset.letter;
     }
   };
-}
-
+*/
 
 
 /*====================================================*/
