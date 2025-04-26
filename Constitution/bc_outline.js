@@ -27,3 +27,14 @@
 
 */
 
+/* Generate an outline based on h1 through h6 headings in the source document */
+
+window.addEventListener("load", makeOutline);
+
+function makeOutline() {
+   // Location of the document outline
+   var outline = document.getElementById("outline");
+
+   // Source document for the outline
+   var source = document.getElementById("coc");
+}
