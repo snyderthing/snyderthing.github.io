@@ -36,5 +36,9 @@ function makeOutline() {
    var outline = document.getElementById("outline");
 
    // Source document for the outline
-   var source = document.getElementById("coc");
+   var source = document.getElementById("doc");
+
+   var mainHeading = document.createElement("h1");
+   var outlineList = document.createElement("ol");
+   var headingText = document.createElement("Outline");
 }
