@@ -24,6 +24,11 @@ testDate.addEventListener("input", calcDate);
       
       */
 
+      /*
+      Have a look at https://javascript.info/date to see the example of "getDateAgo(new Date(), 1)"
+      For instance, if today is 20th, then getDateAgo(new Date(), 1) should be 19th 
+      and getDateAgo(new Date(), 2) should be 18th.
+      */
 
 function calcDate() {
       const thisDate = new Date(2025, 4, 8, 23, 25, 4); // stores a Date object containing
@@ -43,7 +48,7 @@ function calcDate() {
       console.log(convertedTestDate);
       console.log("The date from convertedTestDate is: ", convertedTestDate.getDate());
       console.log("The date from convertedTestDate is: ", convertedTestDate.getUTCDate());
-
+      console.dir(convertedTestDate);
 
       /* Because JavaScript measures time difference in milliseconds, not
             days, the dateDifference variable stores the number of milliseconds
