@@ -1,4 +1,17 @@
 const testDate = document.querySelector('input[type="date"]');
+const convertedTestDate = new Date(Date.UTC(testDate.value));
+// testDate.valueAsNumber += 7 * 60 * 60 * 1000;
+testDate.addEventListener("input", calcDate);
+
+      /*
+      The input event fires when the value of an <input>, <select>, or <textarea> element has been 
+      changed as a direct result of a user action (such as typing in a textbox or checking a checkbox).
+
+      The input event is fired every time the value of the element changes. This is unlike the change 
+      event, which only fires when the value is committed, such as by pressing the enter key or selecting 
+      a value from a list of options. Note that the input event is not fired when JavaScript changes an 
+      element's value programmatically.
+      */
 
       /*
       You can get and set the date value in JavaScript with the HTMLInputElement 
@@ -17,10 +30,20 @@ function calcDate() {
       const thatDate = new Date(2025, 4, 1, 23, 25, 5); // Stores mmm dd, yyyy, 2:35:05 PM in the variable.
       const thisDateStr = thisDate.toLocaleDateString();
       const thatDateStr = thatDate.toLocaleDateString();
-      console.log("The type of testDate.value is: ", typeof (testDate.value))
-      console.log("testDate.value is: ", testDate.value)
+      console.log("The type of testDate is: ", typeof (testDate));
+      console.dir(testDate);
+      console.log("The type of testDate.value is: ", typeof (testDate.value));
+      console.log("The testDate.value is: ", testDate.value);
       console.log("The type of testDate.valueAsNumber is: ", typeof (testDate.valueAsNumber));
-      console.log("testDate.valueAsNumber is: ", typeof (testDate.valueAsNumber));
+      console.log("The testDate.valueAsNumber is: ", typeof (testDate.valueAsNumber), testDate.valueAsNumber);
+
+
+
+      console.log("The type of convertedTestDate is: ", typeof (convertedTestDate));
+      console.log(convertedTestDate);
+      console.log("The date from convertedTestDate is: ", convertedTestDate.getDate());
+      console.log("The date from convertedTestDate is: ", convertedTestDate.getUTCDate());
+
 
       /* Because JavaScript measures time difference in milliseconds, not
             days, the dateDifference variable stores the number of milliseconds
@@ -30,8 +53,8 @@ function calcDate() {
             one second, 60 seconds in one minute, 60 minutes in one hour, and 
             24 hours in one day, the revised command becomes: */
       const dateDifference = (thisDate - thatDate) / (1000 * 60 * 60 * 24);
-      console.log("The type of dateDifference is: ", typeof (dateDifference));
-      console.log("dateDifference: ", dateDifference);
+      // console.log("The type of dateDifference is: ", typeof (dateDifference));
+      // console.log("dateDifference: ", dateDifference);
       // const dateDifferenceStr = dateDifference.toLocaleDateString();
 
 
