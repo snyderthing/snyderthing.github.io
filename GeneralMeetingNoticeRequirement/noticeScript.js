@@ -1,5 +1,7 @@
 const testDate = document.querySelector('input[type="date"]');
-const convertedTestDate = new Date(Date.UTC(testDate.value));
+// const convertedTestDate = new Date(Date.UTC(testDate.value));
+
+
 // testDate.valueAsNumber += 7 * 60 * 60 * 1000;
 testDate.addEventListener("input", calcDate);
 
@@ -31,6 +33,8 @@ testDate.addEventListener("input", calcDate);
       */
 
 function calcDate() {
+      const convertedTestDate = new Date(testDate.value);
+
       const thisDate = new Date(2025, 4, 8, 23, 25, 4); // stores a Date object containing
       const thatDate = new Date(2025, 4, 1, 23, 25, 5); // Stores mmm dd, yyyy, 2:35:05 PM in the variable.
       const thisDateStr = thisDate.toLocaleDateString();
@@ -45,15 +49,21 @@ function calcDate() {
 
 
       console.log("The type of convertedTestDate is: ", typeof (convertedTestDate));
-      console.log(convertedTestDate);
+      console.log("The variable convertedTestDate is: ", convertedTestDate);
       console.log("The date from convertedTestDate is: ", convertedTestDate.getDate());
       console.log("The date from convertedTestDate is: ", convertedTestDate.getUTCDate());
       console.dir(convertedTestDate);
 
+      const utcHours1 = convertedTestDate.setUTCHours(0);
+      const utcHours2 = convertedTestDate.setHours(0);
+      console.log("setUTCHours to 0", utcHours1);
+      console.log("setHours(0) without UTC", utcHours2);
+      console.log("thisDate toLocaleDateString()", thisDate.toLocaleDateString());
+
       /* Because JavaScript measures time difference in milliseconds, not
             days, the dateDifference variable stores the number of milliseconds
             between the two dates. To express this value
-            in days, you need to divice the difference by the number of 
+            in days, you need to divide the difference by the number of 
             milliseconds in one day. Because there are 1000 milliseconds in
             one second, 60 seconds in one minute, 60 minutes in one hour, and 
             24 hours in one day, the revised command becomes: */
@@ -61,8 +71,6 @@ function calcDate() {
       // console.log("The type of dateDifference is: ", typeof (dateDifference));
       // console.log("dateDifference: ", dateDifference);
       // const dateDifferenceStr = dateDifference.toLocaleDateString();
-
-
 
 
       /* JavaScript dates are stored as numeric values equal to the number of milliseconds
