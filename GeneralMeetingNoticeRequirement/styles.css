@@ -10,16 +10,19 @@ body {
     background-color: white;
 }
 
-h1, p {
-    text-align: center;
-}
-
 h1 {
+    text-align: center;
     margin: 0;
+    padding: 1rem;
     font-variant-caps: all-small-caps;
 }
+
+label {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
 #log {
-  height: 20px;
+    font-size: 1.25rem;
   padding: 0.5rem;
-  background-color: #ededed;
 }

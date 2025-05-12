@@ -7,13 +7,14 @@ const options = {
       day: "numeric",
 };
 
-logElement.innerText = `Initial value: ${inputElement.valueAsDate}`;
+// logElement.innerText = `Initial value: ${inputElement.valueAsDate}`;
 
 inputElement.addEventListener("change", () => {
       if (inputElement.valueAsDate !== null) {
             const changedDate = removeTimezoneOffset(inputElement.valueAsDate);
-            // add 20 to the date
-            logElement.innerText = `You selected ${changedDate.toLocaleDateString("en-US", options)}`;
+            // subtract 20 from the date
+            calculateNoticeDate(changedDate);
+            logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}`;
       } else {
             logElement.innerText = `${inputElement.value} resolves to ${inputElement.valueAsDate}`;
       }
@@ -28,25 +29,20 @@ function removeTimezoneOffset(date) {
       date.setHours(date.getHours() + timezoneOffset);
       return date;
 }
-/* 
+
 function calculateNoticeDate(date) {
-      // Date - 20 days
-      let dateCopy = new Date(date);
-
-      dateCopy.setDate(date.getDate() - 20);
-      return dateCopy.getDate();
+      dateCopy = date;
+      dateCopy.setDate(dateCopy.getDate() - 20);
+      return dateCopy;
 }
-*/
 
+/*
 const daysAgo = 20;
 const testDate = new Date("2025-05-28");
 console.log("testDate before removeTimezoneOffset: ", testDate);
 removeTimezoneOffset(testDate);
 
 console.log("testDate after removeTimezoneOffset: ", testDate);
-let earlierDate = getDateAgo(testDate, daysAgo);
-console.log("earlier Date using getDateAgo: ", earlierDate);
-console.log("testDate: ", testDate);
 earlierDate = subtractDays(testDate, daysAgo);
 console.log("earlier Date using subtractDays: ", earlierDate);
 
@@ -57,14 +53,7 @@ function subtractDays(date, days) {
       // console.log(date);
       return dateCopy;
 }
-
-function getDateAgo(date, days) {
-      let dateCopy = new Date(date);
-
-      dateCopy.setDate(date.getDate() - days);
-      return dateCopy.getDate();
-}
-
+*/
 /*
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date
 
