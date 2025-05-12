@@ -34,7 +34,7 @@ label {
 }
 
 .container-container {
-    display: flex;
+    display: none;
     background: #79a1dd;
     min-height: 60vh;
     padding: 0 10px;

@@ -12,7 +12,8 @@ const options = {
 inputElement.addEventListener("change", () => {
       if (inputElement.valueAsDate !== null) {
             const changedDate = removeTimezoneOffset(inputElement.valueAsDate);
-            // subtract 20 from the date
+            document.querySelector(".container-container").style.display = "flex";
+            // subtract 20 from the date and call the function to create the calendar
             createCalendar(calculateNoticeDate(changedDate));
             logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}.`;
             
