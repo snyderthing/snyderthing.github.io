@@ -14,7 +14,7 @@ inputElement.addEventListener("change", () => {
             const changedDate = removeTimezoneOffset(inputElement.valueAsDate);
             // subtract 20 from the date
             calculateNoticeDate(changedDate);
-            logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}`;
+            logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}.`;
       } else {
             logElement.innerText = `${inputElement.value} resolves to ${inputElement.valueAsDate}`;
       }
