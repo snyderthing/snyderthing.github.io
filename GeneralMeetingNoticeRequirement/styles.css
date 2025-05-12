@@ -18,3 +18,8 @@ h1 {
     margin: 0;
     font-variant-caps: all-small-caps;
 }
+#log {
+  height: 20px;
+  padding: 0.5rem;
+  background-color: #ededed;
+}

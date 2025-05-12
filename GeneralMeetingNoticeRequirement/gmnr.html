@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,19 @@
     <link href="styles.css" rel="stylesheet" />
     <script src="noticeScript.js" defer></script>
 </head>
+
 <body>
     <h1>Notice requirements for annual or special general meeting</h1>
 
-    <button type="button" onclick="calcDate()">Go</button>
-    <div class="meetingDate">
-        <label for="meeting">General Meeting Date</label>
-        <input name="meetingDate" id="meeting" type="date" />
-    </div>
+    <label for="date">Pick the general meeting date:</label>
 
-    <p id="thisDate"></p>
-    <p id="thatDate"></p>
-    <p id="dateDifference"></p>
+    <input name="meetingDate" id="date" type="date" />
+
+    <pre id="log"></pre>
+
+    <p id="thisDate"><br /></p>
+    <p id="thatDate"><br /></p>
+    <p id="dateDifference"><br /></p>
 </body>
+
 </html>
