@@ -13,14 +13,9 @@ inputElement.addEventListener("change", () => {
       if (inputElement.valueAsDate !== null) {
             const changedDate = removeTimezoneOffset(inputElement.valueAsDate);
             // subtract 20 from the date
-<<<<<<< HEAD
-            calculateNoticeDate(changedDate);
-            logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}.`;
-=======
             createCalendar(calculateNoticeDate(changedDate));
             logElement.innerText = `The notice must be sent on or before ${changedDate.toLocaleDateString("en-US", options)}.`;
             
->>>>>>> AddCalendar
       } else {
             logElement.innerText = `${inputElement.value} resolves to ${inputElement.valueAsDate}`;
       }
