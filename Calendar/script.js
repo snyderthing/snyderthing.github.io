@@ -1,4 +1,4 @@
-let date = new Date("2025-05-01T08:22:22");
+let date = new Date("2025-04-01T08:22:22");
 let year = date.getFullYear();
 let month = date.getMonth();
 
@@ -53,10 +53,10 @@ const manipulate = () => {
     // Loop to add the dates of the current month
     for (let i = 1; i <= lastdate; i++) {
 
-        // Check if the current date is today
+        // Check if the current date is the selected date
         let isToday = i === date.getDate()
-            && month === new Date().getMonth()
-            && year === new Date().getFullYear()
+            && month === date.getMonth()
+            && year === date.getFullYear()
             ? "active"
             : "";
         lit += `<li class="${isToday}">${i}</li>`;

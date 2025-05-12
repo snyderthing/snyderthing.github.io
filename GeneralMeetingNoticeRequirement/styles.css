@@ -35,8 +35,8 @@ label {
 
 .container-container {
     display: flex;
-    background: #6881f1;
-    min-height: 100vh;
+    background: #79a1dd;
+    min-height: 60vh;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
