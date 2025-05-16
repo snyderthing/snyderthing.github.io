@@ -15,7 +15,11 @@
 
 /* Media Styles */
 
-
+audio, video {
+   display: block;
+   width: 95%;
+   margin: 20px auto;
+}
 
 
 /* Track Styles */
