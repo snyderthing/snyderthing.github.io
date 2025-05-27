@@ -51,7 +51,28 @@ main header h1 {
 }
 /* Figure Box Styles */
 
+figure {
+   margin: 10px auto;
+   width: 70%;
+}
 
+figure > img {
+   border-width: 25px;
+   border-style: solid;
+   border-image: url(tb_frame.png) 60 stretch;
+   filter: sepia(0.8);
+   -webkit-filter: sepia(0.8);
+   /*
+      Create a style rule for the image within the figure box that
+         a) sets the border width to 25px,
+         b) sets the border style to solid,
+         c) applies the tb_frame.png file as a border image with a
+            slice size of 60px stretched across the sides,
+         d) displays the image as a block with a width of 100%, and
+         e) applies a sepia tone to the image with a value of 80%
+            (include the WebKit browser extension in your style sheet).
+   */
+}
 
 /* Article Styles */
 
