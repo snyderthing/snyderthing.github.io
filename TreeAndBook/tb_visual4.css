@@ -16,8 +16,35 @@
 
 /* Transformation Styles */
 
+article {
+   perspective: 800px;
+}
 
+#figure1 {
+   transform: translateZ(-120px);
+}
+
+#figure2 {
+   transform: rotateY(50deg) translateY(-20px);
+}
+
+#figure3 {
+   transform: rotateY(-50deg) translateY(-30px);
+}
 
 /* Filter Styles */
 
+#figure1 {
+   -webkit-filter: saturate(1.3);
+   filter: saturate(1.3);
+}
 
+#figure2 {
+   -webkit-filter: brightness(0.8) contrast(1.5);
+   filter: brightness(0.8) contrast(1.5);
+}
+
+#figure3 {
+   -webkit-filter: hue-rotate(170) saturate(3) brightness(1.5);
+   filter: hue-rotate(170) saturate(3) brightness(1.5);
+}

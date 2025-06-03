@@ -56,26 +56,38 @@ figure {
    width: 70%;
 }
 
-figure > img {
+figure img {
    border-width: 25px;
    border-style: solid;
    border-image: url(tb_frame.png) 60 stretch;
+   display: block;
+   width: 100%;
    filter: sepia(0.8);
    -webkit-filter: sepia(0.8);
-   /*
-      Create a style rule for the image within the figure box that
-         a) sets the border width to 25px,
-         b) sets the border style to solid,
-         c) applies the tb_frame.png file as a border image with a
-            slice size of 60px stretched across the sides,
-         d) displays the image as a block with a width of 100%, and
-         e) applies a sepia tone to the image with a value of 80%
-            (include the WebKit browser extension in your style sheet).
-   */
+}
+
+figure figcaption {
+   font-family: 'Palatino Linotype', Palatino, 'Times New Roman', serif;
+   font-style: italic;
+   padding: 10px 0px;
+   text-align: center;
 }
 
 /* Article Styles */
 
-
+article {
+   background: url(tb_back6.png) bottom right / 15% no-repeat;
+   /* background: color url(url) position / size repeat attachment origin clip; */
+   border-right: 8px double rgb(147, 116, 68);
+   border-bottom: 8px double rgb(147, 116, 68);
+   /* border: width style color; */
+   border-bottom-right-radius: 80px;
+   /* border-radius: top-left top-right bottom-right bottom-left; */
+   box-shadow: inset rgba(184, 154, 112, 0.7) -10px -10px 25px;
+}
 
 /* Footer Styles */
+
+footer {
+   background: linear-gradient(325deg,rgb(180, 148, 104) 20%, rgb(40, 33, 23) 60%);
+}
