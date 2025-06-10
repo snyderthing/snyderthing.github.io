@@ -39,11 +39,8 @@ body > header a {
    border: outset 5px rgb(211, 211, 255);
 }
 
-/* 9. Andrew wants the Charles Messier image flipped horizontally. Add a style to transform the image by rotating it 180° around the y-axis. 
-For the best results, prepend the -webkit prefix to the drop-shadow filter and the transform styles. 
-   10. Go to the Footer Styles section and create a style rule for the footer element that adds a 2-pixel solid border to the top edge of the footer with a color value of rgb(171, 171, 171).
-
-   11. Save...
+/* 
+   11. Save 
    */
 
 /* Section Left Styles */
@@ -61,3 +58,7 @@ section#left > article > h1 {
    transform: rotateY(180deg);
 }
 /* Footer Styles */
+
+footer {
+   border-top: 2px solid rgb(171, 171, 171);
+}
