@@ -51,13 +51,7 @@ window.addEventListener("load", findKeyWords);
 window.addEventListener("load", makeKeyStyles);
 
 function findKeyWords() {
-   /* 
-      Create an aside element with the ID "keywords" and containing
-      an h1 heading with the text "Keyword List".
-      10. Insert the keywords list box you defined in Step 5 as the first child 
-      of the article element with the ID "doc".
-
-   */
+   var articleElem = document.getElementById("doc"); // Points to the main article 
    var asideElem = document.createElement("aside"); // Creates an element node for the aside element
    asideElem.setAttribute("id", "keywords"); // Creates the "keyword" id attribute for the aside element
    
@@ -66,9 +60,11 @@ function findKeyWords() {
    mainHeading.appendChild(headingText); // Appends the text node to the h1 element
 
    asideElem.appendChild(mainHeading); // Appends the h1 heading to the aside element
-   
-   // Appends the aside element to the body
+   articleElem.insertBefore(asideElem, articleElem.firstChild); // Places the aside element before the first child element of the article element
 
+   /*
+      6. Create an ol element and append it to the 'keywords' "aside" element.
+   */
 }
 
 function makeKeyStyles() {
