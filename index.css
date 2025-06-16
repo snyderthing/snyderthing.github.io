@@ -86,7 +86,7 @@ nav.horizontalNavigation li {
 
 nav.horizontalNavigation a {
     display: block;
-    text-align: center;
+    text-align: left;
     height: 2.5em;
     background-color: rgb(199, 199, 71);
     text-decoration: none;

@@ -18,12 +18,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
    <link href="bc_base.css" rel="stylesheet" />
-   <link href="bc_styles.css" rel="stylesheet"   />  
+   <link href="bc_styles.css" rel="stylesheet" />
+   <script src="bc_keys.js" async></script>
 </head>
 
 <body>
    <header>
-      <img src="bc_logo.png" alt="Bridger College" />
+      <img src="bc_logo.png" alt="Bridger College" usemap="#home_map" />
+      <map name="home_map">
+         <area shape="rect" coords="250, 0, 600, 95" href="../index.html" alt="Home" />
+      </map>
       <nav class="horizontal">
          <ul>
             <li><a href="#">Bridger College </a> &#9658; </li>
