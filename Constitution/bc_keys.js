@@ -60,11 +60,28 @@ function findKeyWords() {
    mainHeading.appendChild(headingText); // Appends the text node to the h1 element
 
    asideElem.appendChild(mainHeading); // Appends the h1 heading to the aside element
+   
+   // 10.
    articleElem.insertBefore(asideElem, articleElem.firstChild); // Places the aside element before the first child element of the article element
 
    /*
       6. Create an ol element and append it to the 'keywords' "aside" element.
    */
+   
+   var outlineList = document.createElement("ol");
+   asideElem.appendChild(outlineList);
+
+   var keyWordElems = document.querySelectorAll("dfn");
+   var keyWords = new Array(keyWordElems.length);
+   for (var i = 0; i < keyWordElems.length; i++) {
+      keyWords[i] = keyWordElems[i].textContent;
+      var linkID = replaceWS(keyWords[i]);
+      keyWordElems[i].setAttribute("id", "keyword_" + linkID);
+   }
+   /*
+      8. Sort the keyWords array in alphabetical order.
+   */
+   keyWords.sort();
 }
 
 function makeKeyStyles() {
