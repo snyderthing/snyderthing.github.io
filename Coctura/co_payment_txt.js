@@ -7,8 +7,8 @@
 
    Payment Form Script
    
-   Author: Narvar Walker
-   Date:  08/26/2021 
+   Author: 
+   Date:  
    
    Filename: co_payment.js
    
@@ -44,7 +44,3 @@
 
 */
 
-window.addEventListener("load", function(){
-   // Retrieve the field/value pairs from the url
-   var formData = location.search.slice(1);
-});
