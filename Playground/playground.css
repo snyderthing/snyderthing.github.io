@@ -1,0 +1,115 @@
+/*
+#65655E - dimgrey
+#7D80DA - soft periwinkle
+#B0A3D4 - wisteria
+#CEBACF - thistle
+#C6AFB1 - lilac ash
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: #65655E;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0.25em;
+    max-width: 960px;
+    background-image: linear-gradient(to bottom, lightgray, #CEBACF);
+    /* background-color: #CEBACF; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Style the header */
+header {
+    background-color: #7D80DA;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    border-top: white 1px solid;
+    border-radius: 10px;
+}
+
+/* Container for flexboxes */
+section {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Style the navigation menu */
+nav {
+    flex: 1;
+    background: #CEBACF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+main {
+    flex: 3;
+    background-color: #C6AFB1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#image-container {
+    width: 100%;
+    cursor: pointer;
+}
+
+#color-palette {
+    width: 100%;
+    transition: opacity 0.6s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+footer {
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #7D80DA;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
+}
