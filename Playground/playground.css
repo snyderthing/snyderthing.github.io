@@ -82,10 +82,15 @@ main {
     border-radius: 10px;
 }
 
-#image-container {
-    width: 100%;
+header {
     cursor: pointer;
 }
+/* #image-container {
+    width: 100%;
+    cursor: pointer;
+} */
+
+/* Make an image map in the header so that the cursor changes in only that area*/
 
 #color-palette {
     width: 100%;
@@ -93,7 +98,8 @@ main {
 }
 
 .hidden {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
 }
 
 
