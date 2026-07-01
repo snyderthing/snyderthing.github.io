@@ -1,21 +1,7 @@
 /* Hide the color palette image when the container is clicked */
 
-/* Get the header or whatever is at the top of the page */
 const header = document.querySelector("header");
-
-/* "image-container" is the element that contains the color palette image 
-const container = document.getElementById("image-container");
-*/
-
-/* "color-palette" is the element that represents the color palette image */
 const image = document.getElementById("color-palette");
-
-/* Add a click event listener to the container that toggles the "hidden" class on the image 
-container.addEventListener("click", function () {
-    image.classList.toggle("hidden");
-});
-*/
-/* Add a click event listener to the header that toggles the "hidden" class on the image */
 header.addEventListener("click", function () {
     image.classList.toggle("hidden");
 });
@@ -97,4 +83,11 @@ const recentMovies = movies.filter(m => m.year > 2000);
 
 const titles = movies.map(function(movie) {
     return movie.title.toUpperCase();
+});
+
+const highestRated = movies.reduce((bestMovie, currentMovie) => {
+    if(currentMovie.score > bestMovie.score) {
+        return currentMovie;
+    }
+    return bestMovie;
 });
