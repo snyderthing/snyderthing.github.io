@@ -1,12 +1,11 @@
-/* Hide the color palette image when the container is clicked */
 
+
+/* Hide the color palette image when the container is clicked */
 const header = document.querySelector("header");
 const image = document.getElementById("color-palette");
 header.addEventListener("click", function () {
     image.classList.toggle("hidden");
 });
-
-
 
 /* Log a message to the console when the script is loaded */
 
@@ -21,7 +20,7 @@ numbers.filter(n => {
 });
 
 
-const doubledNumbers = numbers.map(function(num) {
+const doubledNumbers = numbers.map(function (num) {
     return num * 2;
 });
 
@@ -81,13 +80,28 @@ movies.filter(m => m.score > 80).map(m => m.title);
 const badMovies = movies.filter(m => m.score < 70);
 const recentMovies = movies.filter(m => m.year > 2000);
 
-const titles = movies.map(function(movie) {
+const titles = movies.map(function (movie) {
     return movie.title.toUpperCase();
 });
 
 const highestRated = movies.reduce((bestMovie, currentMovie) => {
-    if(currentMovie.score > bestMovie.score) {
+    if (currentMovie.score > bestMovie.score) {
         return currentMovie;
     }
     return bestMovie;
 });
+
+const button = document.querySelector("#colourBoxBtn");
+const colourBoxText = document.querySelector("#colourBoxText");
+button.addEventListener('click', function() {
+    const newColour = makeRandomColour();
+    document.querySelector("#colourBox").style.backgroundColor = newColour;
+     colourBoxText.innerText = newColour;
+});
+
+const makeRandomColour = () => {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+}

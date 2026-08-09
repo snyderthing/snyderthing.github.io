@@ -85,6 +85,7 @@ main {
 header {
     cursor: pointer;
 }
+
 /* #image-container {
     width: 100%;
     cursor: pointer;
@@ -102,6 +103,18 @@ header {
     display: none;
 }
 
+#colourBox {
+    background-color: black;
+    width: 50%;
+    height: 25px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 4px;
+}
+
+#colourBoxText {
+    color: white;
+}
 
 footer {
     font-size: 1em;
