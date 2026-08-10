@@ -11,7 +11,7 @@
 
 <body>
     <!-- <div id="image-container"> -->
-        <img class="hidden" id="color-palette" src="images/colorPalette.png" alt="Color Palette">
+    <img class="hidden" id="color-palette" src="images/colorPalette.png" alt="Color Palette">
     <!-- </div> -->
     <header>
         <h1>Playground</h1>
@@ -27,6 +27,32 @@
             <button id="colourBoxBtn">Change the box's colour</button>
             <div id="colourBox">
                 <span id="colourBoxText">Black</span>
+            </div>
+
+            <div>
+                <h2>Cat Shelter Form</h2>
+                <form action="/shelter" id="shelterForm">
+                    <fieldset>
+                        <legend>Shelter:</legend>
+                        <input type="text" id="catName">
+                        <button>Submit</button>
+                    </fieldset>
+                </form>
+                <h3>Available Cats</h3>
+                <ul id="cats"></ul>
+            </div>
+            <div>
+                <h2>Dog Registry Form</h2>
+                <form action="/dogs" id="tweetForm">
+                    <fieldset>
+                        <legend>Dog:</legend>
+                        <input type="text" name="username" id="username" placeholder="User Name">
+                        <input type="text" name="tweet" id="tweet" placeholder="Tweet">
+                        <button>Post Tweet</button>
+                    </fieldset>
+                </form>
+                <h2>Tweets:</h2>
+                <ul id="tweets"></ul>
             </div>
         </main>
     </section>

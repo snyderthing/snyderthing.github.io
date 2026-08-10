@@ -7,89 +7,8 @@ header.addEventListener("click", function () {
     image.classList.toggle("hidden");
 });
 
-/* Log a message to the console when the script is loaded */
-
-console.log("Playground script loaded successfully.");
 
 /* Play with Colt Steele lesson material */
-
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-
-numbers.filter(n => {
-    return n < 10;
-});
-
-
-const doubledNumbers = numbers.map(function (num) {
-    return num * 2;
-});
-
-const movies = [
-    {
-        title: "Amadeus",
-        score: 99,
-        year: 1984
-    },
-    {
-        title: "Sharknado",
-        score: 35,
-        year: 2013
-    },
-    {
-        title: "13 Going on 30",
-        score: 70,
-        year: 2004
-    },
-    {
-        title: "Stand By Me",
-        score: 85,
-        year: 1986
-    },
-    {
-        title: "Waterworld",
-        score: 62,
-        year: 1995
-    },
-    {
-        title: "Jingle All the Way",
-        score: 71,
-        year: 1996
-    },
-    {
-        title: "Parasite",
-        score: 95,
-        year: 2019
-    },
-    {
-        title: "Notting Hill",
-        score: 77,
-        year: 1999
-    },
-    {
-        title: "Alien",
-        score: 90,
-        year: 1979
-    }
-];
-
-const goodMovies = movies.filter(m => m.score > 80);
-const goodTitles = goodMovies.map(m => m.title);
-
-movies.filter(m => m.score > 80).map(m => m.title);
-
-const badMovies = movies.filter(m => m.score < 70);
-const recentMovies = movies.filter(m => m.year > 2000);
-
-const titles = movies.map(function (movie) {
-    return movie.title.toUpperCase();
-});
-
-const highestRated = movies.reduce((bestMovie, currentMovie) => {
-    if (currentMovie.score > bestMovie.score) {
-        return currentMovie;
-    }
-    return bestMovie;
-});
 
 const button = document.querySelector("#colourBoxBtn");
 const colourBoxText = document.querySelector("#colourBoxText");
@@ -104,4 +23,42 @@ const makeRandomColour = () => {
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
     return `rgb(${r}, ${g}, ${b})`;
+}
+
+/* ----------- */
+
+const form = document.querySelector("#shelterForm");
+const input = document.querySelector("#catName");
+const list = document.querySelector("#cats");
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const catName = input.value;
+    const newListItem = document.createElement("LI");
+    newListItem.innerText = catName;
+    list.append(newListItem);
+    input.value = "";
+});
+
+/* ----------- */
+
+const tweetForm = document.querySelector("#tweetForm");
+const tweetsContainer = document.querySelector("#tweets");
+tweetForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const usernameInput = tweetForm.elements.username;
+    const tweetInput = tweetForm.elements.tweet;
+
+    addTweet(usernameInput.value, tweetInput.value);
+
+    usernameInput.value = "";
+    tweetInput.value = "";
+});
+
+const addTweet = (usernameInput, tweetInput) => {
+    const newTweet = document.createElement('li');
+    const bTag = document.createElement('b');
+    bTag.append(usernameInput);
+    newTweet.append(bTag);
+    newTweet.append(` - ${tweetInput}`);
+    tweetsContainer.append(newTweet);
 }
