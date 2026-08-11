@@ -56,7 +56,11 @@ nav {
 /* Style the list inside the menu */
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 5px;
+}
+
+nav ul li {
+    margin-bottom: 5px;
 }
 
 a:link {
@@ -81,15 +85,6 @@ main {
     padding: 10px;
     border-radius: 10px;
 }
-
-header {
-    cursor: pointer;
-}
-
-/* #image-container {
-    width: 100%;
-    cursor: pointer;
-} */
 
 /* Make an image map in the header so that the cursor changes in only that area*/
 
@@ -126,7 +121,9 @@ footer {
     background-color: #7D80DA;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+/* Responsive layout - makes the menu and the content 
+(inside the section) sit on top of each other instead 
+of next to each other */
 @media (max-width: 600px) {
     section {
         flex-direction: column;

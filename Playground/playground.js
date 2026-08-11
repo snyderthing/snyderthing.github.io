@@ -1,7 +1,9 @@
+/* Give the header a pointer instead of an arrow cursor */
+const header = document.querySelector("header");
+header.style.cursor = "pointer";
 
 
 /* Hide the color palette image when the container is clicked */
-const header = document.querySelector("header");
 const image = document.getElementById("color-palette");
 header.addEventListener("click", function () {
     image.classList.toggle("hidden");
