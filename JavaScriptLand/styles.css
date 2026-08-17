@@ -7,9 +7,10 @@ darkest: #525B44
 
 */
 
+
 html {
     height: 100%;
-    background-color: #85A98F;    
+    background-color: #85A98F;
     margin: 0 auto;
 }
 
@@ -20,7 +21,7 @@ body {
     margin: 0 auto;
     position: relative;
     min-height: 100vh;
-/*    padding-top: 1vw;
+    /*    padding-top: 1vw;
     padding-bottom: 1em; 
     padding-left: 2vw;
     padding-right: 2vw; */
@@ -28,8 +29,8 @@ body {
     box-sizing: border-box;
 }
 
-body > header > nav li {
-    width: 25%;
+body>header>nav li {
+    width: 20%;
     display: block;
     float: left;
 }
@@ -57,14 +58,14 @@ td {
 div#entrance, div#exit {
     height: 30vh;
     width: 20vw;
-    background-color:#525B44;
+    background-color: #525B44;
     color: white;
     margin: 2vh 2vw;
     display: inline-block;
 }
 
 div#preventDefaultFail {
-    background-color:#525B44;
+    background-color: #525B44;
     color: white;
     margin: 2vh 2vw;
     display: inline-block;
@@ -83,4 +84,14 @@ footer {
 
 footer a:visited {
     color: #5A6C57;
- }
+}
+
+
+@media only screen and (max-width: 460px) {
+
+body>header>nav li {
+    width: 100%;
+    display: block;
+    float: clear;
+}
+}

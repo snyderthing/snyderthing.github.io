@@ -11,13 +11,14 @@ html {
     background: url(images/mountain.jpg) center center / cover no-repeat fixed;
     height: 100%;
     background-color: grey;
-} 
+}
 
 body {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;/* flex-flow: direction wrap;
+    flex-flow: row wrap;
+    /* flex-flow: direction wrap;
                         flex-direction: row, column, row-reverse, column-reverse
                         flex-wrap: nowrap, wrap, wrap-reverse */
 
@@ -28,19 +29,19 @@ body {
     color: whitesmoke;
     background-color: rgba(9, 13, 86, .5);
     box-shadow: rgb(51, 51, 51) 5px 0px 15px,
-                rgb(51, 51, 51) -5px 0px 15px;
+        rgb(51, 51, 51) -5px 0px 15px;
 }
 
 header {
     position: relative;
 }
 
-header > img {
+header>img {
     display: block;
     width: 100%;
 }
 
-header > h2 {
+header>h2 {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -49,24 +50,24 @@ header > h2 {
 /* Time Clock Styles */
 
 div#currentTime {
-   display: block;
-   position: absolute;
-   top: 35px;
-   left: 10px;   
-   background-color: transparent;
-   text-shadow: black 2px 2px 1px, rgba(21, 21, 21, 0.66) 5px 5px 25px;
-   border: hidden;
-   color: white;
-   width: 140px;
-   font-size: 1.6em;
-   line-height: 1.1em;
-   font-family: 'Trebuchet MS', Helvetica, sans-serif;
-   font-weight: normal;
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    background-color: transparent;
+    text-shadow: black 2px 2px 1px, rgba(21, 21, 21, 0.66) 5px 5px 25px;
+    border: hidden;
+    color: white;
+    width: 140px;
+    font-size: 1.6em;
+    line-height: 1.1em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 div#currentTime span {
-   display: block;
-   width: 100%;
+    display: block;
+    width: 100%;
 }
 
 nav ul {
@@ -94,15 +95,19 @@ nav.horizontalNavigation a {
     align-content: center;
 }
 
-nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:link,
 nav.horizontalNavigation a:visited {
-   color: rgb(8, 13, 140);
+    color: rgb(8, 13, 140);
 }
 
-nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:hover,
 nav.horizontalNavigation a:active {
-   background-color: rgb(191, 231, 237);
-}   
+    background-color: rgb(191, 231, 237);
+}
+
+li {
+    width: 25%;
+}
 
 aside {
     flex: 1 1 120px;
@@ -123,7 +128,8 @@ dl div {
     display: table-row;
 }
 
-dt, dd {
+dt,
+dd {
     display: table-cell;
     border: 1px solid white;
     vertical-align: top;
@@ -151,7 +157,10 @@ img#wall-e {
    ===============================
 */
 @media only screen and (max-width: 480px) {
-        
+
+    li {
+        width: 100%;
+    }
 }
 
 /* =================================
@@ -161,13 +170,14 @@ img#wall-e {
 @media only screen and (min-width: 481px) {
 
     nav.horizontalNavigation ul {
-    display: flex;
-    flex-flow: row nowrap;
-}
+        display: flex;
+        flex-flow: row nowrap;
+    }
 
-nav.horizontalNavigation li {
-    flex: 1 1 auto;
-}
+    nav.horizontalNavigation li {
+        flex: 1 1 auto;
+
+    }
 
 }
 
@@ -175,6 +185,4 @@ nav.horizontalNavigation li {
     Desktop Styles: 769px and greater
    ==================================
 */
-@media only screen and (min-width: 769px) {
-    
-}
+@media only screen and (min-width: 769px) {}
