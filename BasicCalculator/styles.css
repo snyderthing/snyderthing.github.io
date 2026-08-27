@@ -15,7 +15,7 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 0;
-    background-color: lightsteelblue;
+    background-color: #93f273;
 }
 
 hr {
@@ -36,7 +36,8 @@ h1 {
     border: 3px solid lightgrey;
     margin: 30px auto;
     border-radius: 5px;
-    background-color: #e1e1e1;
+    background-color: #656565;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 1);
 }
 
 input[type=text] {
@@ -57,12 +58,18 @@ input[type=button] {
     font-size: 20px;
     font-weight: bold;
     border-radius: 10%;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.7);
 }
 
 input[type=button]:hover {
     background-color: #8c8c8c;
     cursor: pointer;
 }
+
+input[type="text"]:disabled {
+    color: black;
+}
+
 
 footer {
     margin-top: auto;
