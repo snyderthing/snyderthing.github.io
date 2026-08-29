@@ -16,115 +16,110 @@
 /* Window and Body Styles */
 
 html {
-    height: 100%;
+   height: 100%;
 }
 
 body {
-    width: 95%;
-    min-width: 640px;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
+   width: 95%;
+   min-width: 640px;
+   max-width: 960px;
+   margin: 0 auto;
+   min-height: 100%;
 }
 
 header, ul, nav, li, a {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
-
 /* Row Styles */
 
-*.row::after {
-	content: "";
-	display: table;
-	clear: both;
+.row::after {
+   clear: both;
+   content: "";
+   display: table;
 }
 
 /* Page Header Styles */
 
-body > header > a > img {
-    display: block;
-    width: 70%;
-    float: left;
+header img {
+   display: block;
+   width: 70%;
+   float: left;
 }
 
-body > header > nav {
-    float: left;
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 30%;
+header nav {
+   float: left;
+   padding: 0 2%;
+   width: 30%;
 }
 
-body > header > nav > ul > li > a {
-    display: block;
-    width: 100%;
+nav a {
+   display: block;
+   width: 100%;
 }
 
 /* Horizontal Navigation List Styles */
 
-nav.horizontal li {
-    display: block;
-    width: 12.5%;
-    float: left;
+.horizontal li {
+   display: block;
+   width: 12.5%;
+   float: left;
 }
-
 
 /* Topics Styles */
 
-ul#topics > li {
-    display: block;
-    width: 20%;
-    float: left;
-    margin-left: 0%;
-    margin-right: 1.5%;
+#topics li {
+   display: block;
+   width: 20%;
+   float: left;
+   margin-left: 0%;
+   margin-right: 1.5%;
 }
 
-ul#topics > li:first-of-type {
-    margin-left: 7.75%;
+#topics li:first-of-type {
+   margin-left: 7.75%;
+   margin-right: 7.75%;
 }
 
-ul#topics > li:last-of-type {
-    margin-right: 7.75%;
+#topics img {
+   display: block;
+   width: 50%;
+   margin: 0 auto;
 }
-
-ul#topics > li > img {
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 /* HR Styles */
 
 hr {
-    width: 50%;
+   width: 50%;
 }
-
 
 /* Customer Comment Styles */
 
-ul#comments {
-    width: 75%;
-    margin: 40px auto;
+#comments {
+   width: 75%;
+   margin: 40px auto;
 }
 
-ul#comments > li {
-    display: block;
-    width: 50%;
-    float: left;
-    margin-bottom: 30px;
+#comments li {
+   display: block;
+   width: 50%;
+   float: left;
+   margin-bottom: 30px;
 }
 
-ul#comments > li > p {
-    float: left;
-    width: 70%;
+#comments img {
+   display: block;
+   width: 20%;
+   float: left;
+   margin: 0 5%;
+}
+
+#comments p {
+   float: left;
+   width: 70%;
 }
 
 /* Footer Styles */
 
 footer {
-    clear: both;
+   clear: both;
 }
