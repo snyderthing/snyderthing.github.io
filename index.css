@@ -93,6 +93,8 @@ nav.horizontalNavigation a {
     text-decoration: none;
     padding-left: 10px;
     align-content: center;
+    border-radius: 10px;
+    margin: 2px;
 }
 
 nav.horizontalNavigation a:link,
