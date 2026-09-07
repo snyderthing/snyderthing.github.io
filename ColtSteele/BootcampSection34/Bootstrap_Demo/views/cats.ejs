@@ -1,10 +1,15 @@
-<%- include('partials/head')%>
+<%- include('partials/head')%> <!-- Outputs the unescaped value into the template -->
 
 <%- include('partials/navbar')%>
 <h1>All The Cats</h1>
 <ul>
     <% for(let cat of cats) { %>
-    <li><%= cat %></li>
+    <li><%= cat %></li> <!-- is used to output the result of a JavaScript expression into HTML
+                             with escaping. This means any special characters like <, >, & will 
+                             be converted into safe HTML entities, which helps prevent XSS 
+                             (Cross-site Scripting) attacks.
+                             Escaping content means we're basically treating it as a string
+                             The code will not try to render the content as HTML -->
     <% } %>
 </ul>
 <%- include('partials/footer')%>
