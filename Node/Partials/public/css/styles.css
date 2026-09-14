@@ -26,6 +26,9 @@ header > h1 {
     padding: 2rem;
 }
 
+body h1 {
+    font-size: large;
+}
 ul {
     padding: 2.4rem 2.4rem;
     display: flex;

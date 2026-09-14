@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+
+        <style>
+        html {
+            background-color: black;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: aliceblue;
+            height: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Comment id: <%= comment.id %></h1>
+    <h2><%= comment.comment %> - <%= comment.username %></h2>
+    <a href="/comments">Back to Index</a>
+</body>
+</html>
