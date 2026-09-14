@@ -16,4 +16,29 @@
 
 /* Hidden Objects */
 
+nav, footer, article {
+   display: none;
+}
+
 /* Comic Book Sheet Styles */
+
+section#sheet {
+   width: 6in;
+   margin: 0 auto;
+}
+
+.size1 {
+   width: 5in;
+}
+
+.size2 {
+   width: 3in;
+}
+
+.size3 {
+   width: 2in;
+}
+
+.size4 {
+   width: 1.5in;
+}
