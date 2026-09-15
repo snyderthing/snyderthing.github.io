@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: lightslategrey;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+nav ul {
+    margin: 1em 0;
+    height: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+
+header {
+    padding: 1em;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+    text-align: center;
+}
