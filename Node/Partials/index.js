@@ -11,7 +11,7 @@ app.use(methodOverride('_method')); // for using PATCH or PUT or others
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-const comments = [
+let comments = [
     {
         id: uuid(),
         username: 'Todd',
@@ -70,6 +70,12 @@ app.patch('/comments/:id', (req, res) => {
     const newCommentText = req.body.comment;
     const foundComment = comments.find(c => c.id === id);
     foundComment.comment = newCommentText;
+    res.redirect('/comments');
+});
+
+app.delete('/comments/:id', (req, res) => {
+    const { id } = req.params;
+    comments = comments.filter(c => c.id !== id);
     res.redirect('/comments');
 });
 
