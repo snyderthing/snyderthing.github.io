@@ -29,11 +29,11 @@
       <img src="rb_logo.png" alt="Red Ball Pizza" id="logoimg" />
       <nav> <a id="navicon" href="#"><img src="rb_navicon.png" alt="" /></a>
          <ul>
-            <li><a href="#">home</a></li>
+            <li><a href="../index.html">home</a></li>
             <li><a href="#">menu</a></li>
             <li><a href="#">directions</a></li>
             <li><a href="#">coupons</a></li>
-            <li><a href="#">orders</a></li>
+            <li><a href="rb_customer.html">orders</a></li>
             <li><a href="#">catering</a></li>
             <li><a href="#">reviews</a></li>
          </ul>
@@ -88,6 +88,7 @@
             <div class="formRow">
                <label for="phone">Phone number</label>
                <input type="tel" name="custPhone" id="phone" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s\-]?\d{4}$"/>
+               <!-- The above pattern needed to have the - escaped with a \ -->
             </div>
 
             <div class="formRow">
