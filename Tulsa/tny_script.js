@@ -22,7 +22,8 @@ function runClock() {
    const timeStr = currentDay.toLocaleTimeString();
 
    /* Display the current date and time */
-   document.getElementById("dateNow").innerHTML = dateStr + "<br />" + timeStr;
+   document.getElementById("dateNow").innerHTML 
+      = dateStr + "<br />" + timeStr;
 
    /* Calculate the days until January 1st */
    const newYear = new Date("January 1, 2018");
