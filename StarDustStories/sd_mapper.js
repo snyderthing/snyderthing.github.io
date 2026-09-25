@@ -1,4 +1,4 @@
-"usage strict";
+"use strict";
 
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
