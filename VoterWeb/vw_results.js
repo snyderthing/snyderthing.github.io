@@ -24,44 +24,45 @@
       
 */
 
-/* Variables */
-let reportHTML = `<h1>${raceTitle}</h1>`;
-let totalVotes = 0;
+var reportHTML = "<h1>" + raceTitle + "</h1>";
 
-/* For loop */
-for (let i = 0; i < race.length; i++) {
-  // let totalVotes = 0;
-  totalVotes = votes.forEach(calcSum);
+
+for (var i = 0; i < race.length; i++) {
+  var totalVotes = 0;
+  votes[i].forEach(calcSum);
   reportHTML += `<table>
                  <caption>${race[i]}</caption>
                  <tr><th>Candidate</th><th>Votes</th></tr>`;
   reportHTML += candidateRows(i, totalVotes);
   reportHTML += `</table>`;
 }
-  
-document.getElementsByTagName("section")[0].innerHTML = reportHTML;
-// document.getElementsByTagName("section")[0].innerHTML = "<h1>Hey</h1>";
 
-/* Write indivitual table rows for each candidate, showing the
+document.getElementsByTagName("section")[0].innerHTML = reportHTML;
+
+/* Write individual table rows for each candidate, showing the
    candidate's name, party affiliation, vote total, and vote percentage. */
 function candidateRows(raceNum, totalVotes) {
-  let rowHTML = "";
-  for (let j = 0; j < 3; j++) {
-    const candidateName = candidate[raceNum][j];
-    const candidateParty = candidate[raceNum][j];
-    const candidateVotes = candidate[raceNum][j];
-    const candidatePercent = calcPercent(candidateVotes, totalVotes);
-    rowHTML += `<tr>
-                <td>${candidateName} (${candidateParty})</td>
-                <td>${candidateVotes.toLocaleString()} (${candidatePercent})</td>
-                </tr>`;
+  var rowHTML = "";
+  for (var j = 0; j < 3; j++) {
+    var candidateName = candidate[raceNum][j];
+    var candidateParty = party[raceNum][j];
+    var candidateVotes = votes[raceNum][j];
+    var candidatePercent = calcPercent(candidateVotes, totalVotes);
+
+    rowHTML += "<tr>" +
+      "<td>" + candidateName + " (" + candidateParty + ")</td>" +
+      "<td>" + candidateVotes.toLocaleString() + " (" + candidatePercent.toFixed(1) + "%)</td>";
+    for (var k = 0; k < candidatePercent; k++) {
+       rowHTML += createBar(candidateParty, candidatePercent); 
+      }
+    rowHTML +=  "</tr>";
   }
+  return rowHTML;
 }
 
 /* Callback Function to calculate an array sum */
 function calcSum(value) {
   totalVotes += value;
-  console.log(totalVotes);
 }
 
 /* Function to calculate a percentage */
@@ -70,6 +71,19 @@ function calcPercent(value, sum) {
 }
 
 /* Bar Chart Function */
+function createBar(partyType) {
+  var barHTML = "";
 
-/* Bar Chart Creation */
+  switch (partyType) {
+    case "D":
+      barHTML = "<td class='dem'></td>";
+      break;
+    case "R":
+      barHTML = "<td class='rep'></td>";
+      break;
+    case "I":
+      barHTML = "<td class='ind'></td>";
+  }
 
+  return barHTML;
+}
