@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*
+   CSS CREATED BY GROK
+
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 1
+   Case Problem 2
+   Filename: ms_layout.css
+
+   This file contains the layout styles used at Math Strings
+
+*/
+
+/* =============================================
+	Base layout styles used by mobile devices
+	up to 480px and cascaded to larger devices 
+	unless superceded by other styles.
+   =============================================
+*/
+
+
+/* Mobile-first base (stacks everything) */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "article"
+    "aside"
+    "nav"
+    "footer";
+  gap: 1.5rem;                 /* optional spacing between sections */
+  max-width: 1200px;           /* optional page constraint */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header  { grid-area: header; }
+article { grid-area: article; }
+aside   { grid-area: aside; }
+nav     { grid-area: nav; }
+footer  { grid-area: footer; }
+
+/* Large screens: header full width, two columns below, footer full width */
+@media screen and (min-width: 700px) {
+  body {
+    grid-template-columns: 2fr 1fr;   /* left column wider; adjust ratio as desired */
+    grid-template-areas:
+      "header  header"
+      "article aside"
+      "article nav"
+      "footer  footer";
+  }
+}
+
+/* Grok suggestions */
+
+/* Make the Euler portrait float or constrain its size inside the article */
+/*
+article img {
+  float: right;          /* classic textbook look */
+/*  max-width: 40%;
+  margin: 0 0 1rem 1.5rem;
+}
+
+/* Or keep it block-level and centered */
+/* article img {
+  display: block;
+  max-width: 280px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Nice visual separation for the right column */
+/* aside, nav {
+  background: #f7f7f7;   /* or whatever matches your design */
+/*  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+  */
