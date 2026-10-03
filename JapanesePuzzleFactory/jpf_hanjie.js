@@ -58,6 +58,7 @@
 window.onload = init;
 
 var puzzleCells;
+var cellBackground;
 
 function init() {
    // Insert the title for the first puzzle
@@ -74,6 +75,9 @@ function init() {
    }
 
    setupPuzzle();
+
+   // Add an event listener for the mouseup event
+   document.addEventListener("mouseup", endBackground);
 }
 
 function swapPuzzle(e) {
@@ -106,6 +110,48 @@ function setupPuzzle() {
    /* Set the initial color of each cell to gold */
    for (var i = 0; i < puzzleCells.length; i++) {
       puzzleCells[i].style.backgroundColor = "rgb(233, 207, 29)";
+      // Set the cell background color in response to the mousedown event
+      puzzleCells[i].onmousedown = setBackground;
+      // Use a pencil image as the cursor
+      puzzleCells[i].style.cursor = "url(jpf_pencil.png), pointer";
+   }
+}
+
+function setBackground(e) {
+   var cursorType;
+   // Set the background based on the keyboard key
+   if (e.shiftKey) {
+      cellBackground = "rgb(233, 207, 29)";
+      cursorType = "url(jpf_eraser.png) 5 5, cell";
+   } else if (e.altKey) {
+      cellBackground = "rgb(255, 255, 255)";
+      cursorType = "url(jpf_cross.png) 16 16, crosshair";
+   } else {
+      cellBackground = "rgb(101, 101, 101)";
+      cursorType = "url(jpf_pencil.png), pointer";
+   }
+
+   e.target.style.backgroundColor = cellBackground;
+
+   // Create an event listener for every puzzle cell
+   for (var i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].addEventListener("mouseenter", extendBackground);
+      puzzleCells[i].style.cursor = cursorType;
+
+      // Prevent the default action of selecting table text
+      e.preventDefault();
+   }
+}
+
+function extendBackground(e) {
+   e.target.style.backgroundColor = cellBackground;
+}
+
+function endBackground() {
+   // Remove the event listener for every puzzle cell
+   for (var i = 0; i < puzzleCells.length; i++) {
+      puzzleCells[i].removeEventListener("mouseenter", extendBackground);
+      puzzleCells[i].style.cursor = "url(jpf_pencil.png), pointer";
    }
 }
 

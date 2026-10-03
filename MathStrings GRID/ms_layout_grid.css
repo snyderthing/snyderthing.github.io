@@ -1,0 +1,33 @@
+/* Mobile-first base (stacks everything) */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "article"
+    "aside"
+    "nav"
+    "footer";
+  gap: 1.5rem;                 /* optional spacing between sections */
+  max-width: 1200px;           /* optional page constraint */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header  { grid-area: header; }
+article { grid-area: article; }
+aside   { grid-area: aside; }
+nav     { grid-area: nav; }
+footer  { grid-area: footer; }
+
+/* Large screens: header full width, two columns below, footer full width */
+@media screen and (min-width: 700px) {
+  body {
+    grid-template-columns: 2fr 1fr;   /* left column wider; adjust ratio as desired */
+    grid-template-areas:
+      "header  header"
+      "article aside"
+      "article nav"
+      "footer  footer";
+  }
+}
