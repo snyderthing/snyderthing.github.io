@@ -51,41 +51,46 @@ let allCells;
 
 window.onload = startUp;
 
-/* Displays the contents of Puzzle 1 after the page is loaded
-   and sets up the initial event handlers. */
+/* Run when the web page is loaded; displays puzzle 1
+   and loads the event handlers for the web page buttons. */
+
 function startUp() {
    document.querySelector("#puzzleTitle").innerHTML = "Puzzle 1";
 
-   document.querySelector("#puzzle").innerHTML = drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
+   document.querySelector("#puzzle").innerHTML =
+      drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
 
-   let puzzleButtons = document.querySelectorAll(".puzzles");
+   const puzzleButtons = document.getElementsByClassName("puzzles");
+
    for (let i = 0; i < puzzleButtons.length; i++) {
       puzzleButtons[i].onclick = switchPuzzle;
    }
 
    setupPuzzle();
 
-   // document.querySelector("#check").addEventListener("click", findErrors);
    document.querySelector("#check").onclick = findErrors;
-
    document.querySelector("#solve").onclick = showSolution;
 }
 
-/* Switches the page between the three possible Hitori puzzles. */
+/* Swaps one puzzle for another based on the button being clicked 
+   by the user. Confirms the change before swapping in the new puzzle. */
 function switchPuzzle(e) {
-   if (confirm("Your work will be lost if you switch puzzles! Continue?")) {
+   if (confirm("You will lose all of your work on the puzzle! Continue?")) {
       const puzzleID = e.target.id;
       document.querySelector("#puzzleTitle").innerHTML = e.target.value;
 
       switch (puzzleID) {
          case "puzzle1":
-            document.getElementById("puzzle").innerHTML = drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
+            document.querySelector("#puzzle").innerHTML =
+               drawHitori(hitori1Numbers, hitori1Blocks, hitori1Rating);
             break;
          case "puzzle2":
-            document.getElementById("puzzle").innerHTML = drawHitori(hitori2Numbers, hitori2Blocks, hitori2Rating);
+            document.querySelector("#puzzle").innerHTML =
+               drawHitori(hitori2Numbers, hitori2Blocks, hitori2Rating);
             break;
          case "puzzle3":
-            document.getElementById("puzzle").innerHTML = drawHitori(hitori3Numbers, hitori3Blocks, hitori3Rating);
+            document.querySelector("#puzzle").innerHTML =
+               drawHitori(hitori3Numbers, hitori3Blocks, hitori3Rating);
             break;
       }
 
@@ -94,75 +99,69 @@ function switchPuzzle(e) {
 }
 
 function setupPuzzle() {
-   allCells = document.querySelectorAll("table#hitoriGrid td");
+   allCells = document.querySelectorAll("table#hitoriGrid td")
    for (let i = 0; i < allCells.length; i++) {
       allCells[i].style.backgroundColor = "white";
       allCells[i].style.color = "black";
       allCells[i].style.borderRadius = "0";
-      allCells[i].addEventListener("mousedown", function (evt) {
-         
-         if (evt.shiftKey) {
-            allCells[i].style.backgroundColor = "white";
-            allCells[i].style.color = "black";
-            allCells[i].style.borderRadius = "0";
-         } else if (evt.altKey) {
-            allCells[i].style.backgroundColor = "black";
-            allCells[i].style.color = "white";
-            allCells[i].style.borderRadius = "0";
-         } else {
-            allCells[i].style.backgroundColor = "rgb(101, 101, 101)";
-            allCells[i].style.color = "white";
-            allCells[i].style.borderRadius = "50%";
+      allCells[i].addEventListener("mousedown",
+         function (event) {
+            if (event.shiftKey) {
+               allCells[i].style.backgroundColor = "white";
+               allCells[i].style.color = "black";
+               allCells[i].style.borderRadius = "0";
+            } else if (event.altKey) {
+               allCells[i].style.backgroundColor = "black";
+               allCells[i].style.color = "white";
+               allCells[i].style.borderRadius = "0";
+            } else {
+               allCells[i].style.backgroundColor = "rgb(101, 101, 101)";
+               allCells[i].style.color = "white";
+               allCells[i].style.borderRadius = "50%";
+            }
+
+            event.preventDefault();
          }
-
-         // Prevent the default action of selecting table text
-         evt.preventDefault();
-
-         
-      });
-      /*
-      <div id="outer">
-         <div id="inner"></div>
-      </div>
-      If you create a mouseenter event listener for the outer div element, the event will be triggered
-      only for the outer div element. This is because the mouseenter event does not bubble through the 
-      object hierarchy. On the other hand, the mouseover event does bubble and thus will be fired when the 
-      pointer enters either outer div element or inner div elements. Unless you want the event triggered 
-      for an element and all its descendants, you should listen only for the mouseenter event.
-      */
-      // Change the cursor
-      allCells[i].addEventListener("mouseover", function (evt) {
-         // change to jpf_eraser.png or the generic cursor named "alias" if the user is pressing the Shift key
-         if (evt.shiftKey) {
-            allCells[i].style.cursor = "url(jpf_eraser.png), alias";
-         } else if (evt.altKey) {
-            allCells[i].style.cursor = "url(jpf_block.png), cell";
-         } else {
-            allCells[i].style.cursor = "url(jpf_circle.png), pointer";
+      );
+      allCells[i].addEventListener("mouseover",
+         function (event) {
+            if (event.shiftKey) {
+               allCells[i].style.cursor = "url(jpf_eraser.png) 5 5, alias";
+            } else if (event.altKey) {
+               allCells[i].style.cursor = "url(jpf_block.png) 8 8, cell";
+            } else {
+               allCells[i].style.cursor = "url(jpf_circle.png) 16 16, pointer";
+            }
          }
-      });
-
+      );
+      // checkSolution() in respose to mouseup event
       allCells[i].addEventListener("mouseup", checkSolution);
    }
 }
 
+/* Highlight incorrect cells by displaying the cell number
+   of an incorrect  ell in a red font. */
 function findErrors() {
    for (let i = 0; i < allCells.length; i++) {
-      if (allCells[i].className === "blocks" && allCells[i].style.backgroundColor === "rgb(101, 101, 101)"
-         || allCells[i].className === "circles" && allCells[i].style.backgroundColor === "black") {
+      if (allCells[i].className === "blocks" &&
+         allCells[i].style.backgroundColor === "rgb(101, 101, 101)"
+         ||
+         allCells[i].className == "circles" &&
+         allCells[i].style.backgroundColor == "black") {
          allCells[i].style.color = "red";
       }
    }
 
-   setTimeout(function () {
-      for (let i = 0; i < allCells.length; i++) {
-         if (allCells[i].style.color === "red") {
-            allCells[i].style.color = "white";
+   // Remove the hints after 1 second
+   setTimeout(
+      function () {
+         for (let i = 0; i < allCells.length; i++) {
+            if (allCells[i].style.color === "red") {
+               allCells[i].style.color = "white";
+            }
          }
-      }
-   },1000);
+      }, 1000);
 }
-
 
 
 /* ================================================================= */
@@ -170,6 +169,7 @@ function findErrors() {
 function checkSolution() {
    /* Set the initial solved state of the puzzle to true */
    var solved = true;
+
    /* Loop through the puzzle cells, exiting when an incorrect
       cell is found, setting the solved variable to false */
 
