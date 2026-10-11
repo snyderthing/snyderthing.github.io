@@ -45,94 +45,109 @@
       
    getChar(keyNum)
       Returns the text character associated with the key code value, keyNum
-
-
 */
 
 /* Global variables */
 
 let allLetters;
+// References all of the letter cells in the crossword table#crossword
+
 let currentLetter;
+// References the letter currently selected in the puzzleLetter
+
 let wordLetters;
+// References the across and down letters in the word(s) associated with the current letter
+
 let acrossClue;
+// References the across clue associated with the current letter
+
 let downClue;
-let typeDirection = "right";
-let typeImage;
+// References the down clue associated with the current letter
+
+let typeDirection = "down";
 
 window.onload = init;
 
 /* Function List */
 
-function init() {
+/* init() function */
+function init(event) {
+   // Set the allLetters variable to reference the elements using the selector "table#crossword span"
    allLetters = document.querySelectorAll("table#crossword span");
+   
+   // Set the currentLetter variable to reference the first object in allLetters collection
    currentLetter = allLetters[0];
+
+   // object.dataset.name
+   // var employee = document.getElementById("employee");
+   // var section = employee.dataset.section;
+   // var position = employee.dataset.position;
+   // <element data-name="value">      
    // Declare the acrossID variable, setting its value equal to the value of 
-   // the data-clue-a attribute for currentLetter. Declare the downID variable,
+   // the data-clue-a attribute for currentLetter. 
+   let acrossID = currentLetter.dataset.clueA;
+   
+   // Declare the downID variable,
    // setting its value equal to the value of the data-clue-d attribute for currentLetter
-   // let acrossID = currentLetter.dataset.clueA;
-   // let downID = currentLetter.dataset.clueD;
+   let downID = currentLetter.dataset.clueD;
 
    // Set the value of acrossClue to reference the element with the id attribute "acrossID". 
+   acrossClue = document.getElementById("across");
    // Set the value of downClue to reference the element with the id attribute "downID".
-   // acrossClue = acrossID;
-   // downClue = downID;
-   
-   acrossClue = document.getElementById(currentLetter.dataset.clueA);
-   downClue = document.getElementById(currentLetter.dataset.clueD);
+   downClue = document.getElementById("down");
 
+   // Color the crossword puzzle's first letter
    formatPuzzle(currentLetter);
-   
-   /*
-   typeImage = document.getElementById("directionImg");
-   typeImage.style.cursor = "pointer";
-   */
-   typeImage = document.getElementById("directionImg").style.cursor = "pointer";
 
+   // User to select a puzzle cell
    for (let i = 0; i < allLetters.length; i++) {
       allLetters[i].style.cursor = "pointer";
       allLetters[i].onmousedown = function (e) {
          formatPuzzle(e.target);
-      };
+      }
    }
-
    document.onkeydown = selectLetter;
 
-   /*
-   typeImage.onclick = switchTypeDirection();
-   */
-   document.getElementById("directionImg").onclick = switchTypeDirection;
+   let typeImage = document.getElementById("directionImg");
+   typeImage.style.cursor = "pointer";
+   typeImage.onclick = switchTypeDirection;
+
    document.getElementById("showErrors").onclick = function () {
-      for (var i = 0; i < allLetters.length; i++) {
+      for (let i = 0; i < allLetters.length; i++) {
          if (allLetters[i].textContent !== allLetters[i].dataset.letter) {
             allLetters[i].style.color = "red";
          }
       }
       setTimeout(function () {
-         for (var i = 0; i < allLetters.length; i++) {
+         for (let i = 0; i < allLetters.length; i++) {
             allLetters[i].style.color = "";
          }
       }, 3000);
-   };
-
+   }
 
    document.getElementById("showSolution").onclick = function () {
-      for (var i = 0; i < allLetters.length; i++) {
+      for (let i = 0; i < allLetters.length; i++) {
          allLetters[i].textContent = allLetters[i].dataset.letter;
       }
-   };
+   }
 }
 
+/* formatPuzzle() function */
 function formatPuzzle(puzzleLetter) {
    currentLetter = puzzleLetter;
    for (let i = 0; i < allLetters.length; i++) {
       allLetters[i].style.backgroundColor = "";
    }
+
    acrossClue.style.color = "";
    downClue.style.color = "";
+
    if (currentLetter.dataset.clueA !== undefined) {
       acrossClue = document.getElementById(currentLetter.dataset.clueA);
       acrossClue.style.color = "blue";
-      wordLetters = document.querySelectorAll("[data-clue-A = " + currentLetter.dataset.clueA + "]");
+      wordLetters = document.querySelectorAll(
+         "[data-clue-A = " + currentLetter.dataset.clueA + "]"
+      );
       for (let i = 0; i < wordLetters.length; i++) {
          wordLetters[i].style.backgroundColor = "rgb(231, 231, 255)";
       }
@@ -141,25 +156,28 @@ function formatPuzzle(puzzleLetter) {
    if (currentLetter.dataset.clueD !== undefined) {
       downClue = document.getElementById(currentLetter.dataset.clueD);
       downClue.style.color = "red";
-      wordLetters = document.querySelectorAll("[data-clue-D = " + currentLetter.dataset.clueD + "]");
+      wordLetters = document.querySelectorAll(
+         "[data-clue-D = " + currentLetter.dataset.clueD + "]"
+      );
       for (let i = 0; i < wordLetters.length; i++) {
          wordLetters[i].style.backgroundColor = "rgb(255, 231, 231)";
       }
    }
 
-   if (typeDirection === "right") {
+   if (typeDirection == "right") {
       currentLetter.style.backgroundColor = "rgb(191, 191, 255)";
    } else {
       currentLetter.style.backgroundColor = "rgb(255, 191, 191)";
    }
 }
 
-function selectLetter(e) {
+/* selectLetter() function to allow users to select puzzle cells via keyboard */
+function selectLetter(event) {
    let leftLetter = document.getElementById(currentLetter.dataset.left);
    let upLetter = document.getElementById(currentLetter.dataset.up);
    let rightLetter = document.getElementById(currentLetter.dataset.right);
    let downLetter = document.getElementById(currentLetter.dataset.down);
-   let userKey = e.keyCode;
+   let userKey = event.keyCode;
 
    if (userKey === 37) {
       formatPuzzle(leftLetter);
@@ -173,7 +191,7 @@ function selectLetter(e) {
       currentLetter.textContent = "";
    } else if (userKey === 32) {
       switchTypeDirection();
-   } else if (userKey >= 65 && userKey <= 90) {
+   } else if (userKey > 64 && userKey < 91) {
       currentLetter.textContent = getChar(userKey);
       if (typeDirection === "right") {
          formatPuzzle(rightLetter);
@@ -181,19 +199,20 @@ function selectLetter(e) {
          formatPuzzle(downLetter);
       }
    }
-   e.preventDefault();
+   event.preventDefault();
 }
 
+/* switchTypeDirection() function to toggle the typing direction between right and down */
 function switchTypeDirection() {
-   typeImage = document.querySelector("#directionImg");
-   if (typeDirection == "right") {
-      typeDirection = "down";
-      typeImage.src = "pc_right.png";
-      currentLetter.style.backgroundColor = "rgb(255, 191, 191)";
-   } else {
+   let typeImage = document.getElementById("directionImg");
+   if (typeDirection === "down") {
       typeDirection = "right";
-      typeImage.src = "pc_down.png";
+      typeImage.src = "pc_right.png";
       currentLetter.style.backgroundColor = "rgb(191, 191, 255)";
+   } else {
+      typeDirection = "down";
+      typeImage.src = "pc_down.png";
+      currentLetter.style.backgroundColor = "rgb(255, 191, 191)";
    }
 }
 
