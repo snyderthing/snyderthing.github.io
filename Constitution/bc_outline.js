@@ -38,13 +38,13 @@ function makeOutline() {
    // Source document for the outline
    var source = document.getElementById("doc");
 
-   var mainHeading = document.createElement("h1"); // Creates an element node for the h1 element
-   var outlineList = document.createElement("ol"); // Creates an element node for the ol element
-   var headingText = document.createTextNode("Outline"); // Creates a text node containing the text string "Outline"
+   var mainHeading = document.createElement("h1");
+   var outlineList = document.createElement("ol");
+   var headingText = document.createTextNode("Outline");
 
-   mainHeading.appendChild(headingText); // Appends the text node to the h1 element
-   outline.appendChild(mainHeading); // Appends the h1 heading to the outline
-   outline.appendChild(outlineList); // Appends an ordered list to the outline
+   mainHeading.appendChild(headingText);
+   outline.appendChild(mainHeading);
+   outline.appendChild(outlineList);
 
    createList(source, outlineList);
 }
@@ -60,21 +60,18 @@ function createList(source, outlineList) {
    var headNum = 0;
 
    /* Loop through all of the child nodes of source
-      article until no child nodes are left */
-   
+   article until no child nodes are left */
    for (var n = source.firstChild; n !== null; n = n.nextSibling) {
       // Examine only article headings
       var headLevel = headings.indexOf(n.nodeName);
 
-      // Retrieve the text of each heading and append that text
-      // to a list item in the outline list.
       if (headLevel !== -1) {
          // Add an id to the heading if it is missing
          headNum++;
          if (n.hasAttribute("id") === false) {
             n.setAttribute("id", "head" + headNum);
          }
-         // creates an li element
+
          var listElem = document.createElement("li");
          
          // Create hypertext links to the document headings
@@ -85,7 +82,6 @@ function createList(source, outlineList) {
          // Append the hypertext link to the list item
          listElem.appendChild(linkElem);
 
-         // appends the li element to the outline list
          if (headLevel === prevLevel) {
             // Append the list item to the current list
             outlineList.appendChild(listElem);
@@ -93,23 +89,21 @@ function createList(source, outlineList) {
             // Start a new nested list
             var nestedList = document.createElement("ol");
             nestedList.appendChild(listElem);
-            
             // Append nested list to last item in the current list
             outlineList.lastChild.appendChild(nestedList);
-
             // Change the current list to the nested list
             outlineList = nestedList;
          } else {
             // Append the list item to a higher list
-            // Calculate the difference between the current and previous levels
+            // Calculate the difference between the current and previous level
             var levelUp = prevLevel - headLevel;
-            // Go up to the higer level
+
+            // Go up to the higher level
             for (var i = 1; i <= levelUp; i++) {
                outlineList = outlineList.parentNode.parentNode;
             }
             outlineList.appendChild(listElem);
          }
-
          // Update the value of prevLevel
          prevLevel = headLevel;
       }
