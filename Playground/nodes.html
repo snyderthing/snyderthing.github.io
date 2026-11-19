@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Nodes</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="nodes.html">Nodes</a></li>
+                <li><a href="scorekeeper.html">Scorekeeper</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Node relationships</h2>
+            <table>
+                <colgroup>
+                    <col class="firstCol">
+                    <col class="secondCol">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Expression</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i>node</i>.firstChild
+                        </td>
+                        <td>
+                            The first child of <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.lastChild
+                        </td>
+                        <td>
+                            The last child of <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.childNodes
+                        </td>
+                        <td>
+                            A collection of all of the nodes that are direct children of <i>node</i>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.previousSibling
+                        </td>
+                        <td>
+                            The sibling prior to <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.nextSibling
+                        </td>
+                        <td>
+                            The sibling after <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.ownerDocument
+                        </td>
+                        <td>
+                            The root node of the document
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.parentNode
+                        </td>
+                        <td>
+                            The parent of <i>node</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Element Node relationships</h2>
+            <table>
+                <colgroup>
+                    <col class="firstCol">
+                    <col class="secondCol">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Expression</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i>node</i>.children
+                        </td>
+                        <td>
+                            A collection of all the element nodes contained within <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.firstElementChild
+                        </td>
+                        <td>
+                            The first element within <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.lastElementChild
+                        </td>
+                        <td>
+                            The last element within <i>node</i>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.nextElementSibling
+                        </td>
+                        <td>
+                            The next sibling element to <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.previousElementSibling
+                        </td>
+                        <td>
+                            The previous sibling element to <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.childElementCount
+                        </td>
+                        <td>
+                            The number of child elements within <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.children.length
+                        </td>
+                        <td>
+                            The number of child elements within <i>node</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Methods to create nodes</h2>
+            <table>
+                <colgroup>
+                    <col class="firstCol">
+                    <col class="secondCol">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            document.createAttribute(<i>att</i>)
+                        </td>
+                        <td>
+                            Creates an attribute node with the name (<i>att</i>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            document.createComment(<i>text</i>)
+                        </td>
+                        <td>
+                            Creates a comment node containing the comment <i>text</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            document.createElement(<i>elem</i>)
+                        </td>
+                        <td>
+                            Creates an element node with the name <i>elem</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            document.createTextNode(<i>text</i>)
+                        </td>
+                        <td>
+                            Creates a text node containing the text string <i>text</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.cloneNode(<i>deep</i>)
+                        </td>
+                        <td>
+                            Creates a copy of <i>node</i> where <i>deep</i> is a Boolean value that indicates whether to copy all descendants of <i>node</i> (true) or only <i>node</i> itself (false)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.setAttributeNode(<i>att</i>)
+                        </td>
+                        <td>
+                            The setAttributeNode() method adds an attribute node to an element.<br>The setAttributeNode() method replaces existing attribute nodes.<br>The setAttributeNode() method returns an Attribute object.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Methods to append and replace nodes</h2>
+            <table>
+                <colgroup>
+                    <col class="firstCol">
+                    <col class="secondCol">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i>node</i>.appendChild(<i>new</i>)
+                        </td>
+                        <td>
+                            Appends <i>new</i> node as a child of <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.insertBefore(<i>new,&nbsp;child</i>)
+                        </td>
+                        <td>
+                            Inserts <i>new</i> node directly before <i>child</i> node <i>node</i> (if no <i>child</i>
+                            node is specified then <i>new</i> node is added as the last child node)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.normalize()
+                        </td>
+                        <td>
+                            Traverses all of the child nodes of <i>node</i>; any adjacent text nodes are merged into a
+                            single text node
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.removeChild(<i>old</i>)
+                        </td>
+                        <td>
+                            Removes <i>old</i> node from <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.replaceChild(<i>new,&nbsp;old</i>)
+                        </td>
+                        <td>
+                            Replaces <i>old</i> node with <i>new</i> node
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Node types, names, and values</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Node</th>
+                        <th><i>node</i>.nodeType</th>
+                        <th><i>node</i>.nodeName</th>
+                        <th><i>node</i>.nodeValue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Element</td>
+                        <td class="centerText">1</td>
+                        <td><i>ELEMENT&nbsp;NAME</i></td>
+                        <td>null</td>
+                    </tr>
+                    <tr>
+                        <td>Attribute</td>
+                        <td class="centerText">2</td>
+                        <td><i>attribute&nbsp;name</i></td>
+                        <td><i>attribute&nbsp;value</i></td>
+                    </tr>
+                    <tr>
+                        <td>Text</td>
+                        <td class="centerText">3</td>
+                        <td>#text</td>
+                        <td><i>text&nbsp;string</i></td>
+                    </tr>
+                    <tr>
+                        <td>Comment</td>
+                        <td class="centerText">8</td>
+                        <td>#comment</td>
+                        <td><i>comment&nbsp;text</i></td>
+                    </tr>
+                    <tr>
+                        <td>Document</td>
+                        <td class="centerText">9</td>
+                        <td>#document</td>
+                        <td>null</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Attribute Nodes</h2>
+            <p>An attribute node contains an attribute that can be attached to an element node. However, unlike element and text nodes, <em>attribute nodes are not part of the node tree</em> because they are not the child or parent of any node and thus cannot be placed within a hierarchy. Instead, an attribute node is associated with an element node. For example, an <i>href</i> attribute might be associated with an element node for an <code>a</code> element.</p>
+
+            <h2>Methods of attribute nodes</h2>
+            <table>
+                <colgroup>
+                    <col class="firstCol">
+                    <col class="secondCol">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i>node</i>.attributes
+                        </td>
+                        <td>
+                            Returns the collection of attributes associated with <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.attributes<span class="space">[<i>i</i>]</span>.nodeName
+                        </td>
+                        <td>
+                            Returns the attribute name from an item in the attributes collection where <i>i</i> is the index number
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.attributes<span class="space">[<i>i</i>]</span>.nodeValue
+                        </td>
+                        <td>
+                            Returns the attribute value from an item in the attributes collection
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            document.createAttribute(<i>att</i>)
+                        </td>
+                        <td>
+                            Creates an attribute node with the name <i>att</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.getAttribute(<i>att</i>)
+                        </td>
+                        <td>
+                            Returns the value of the <i>att</i> attribute associated with <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.hasAttribute(<i>att</i>)
+                        </td>
+                        <td>
+                            Returns a Boolean value indicating whether <i>node</i> is associated with the <i>att</i> attribute
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.removeAttribute(<i>att</i>)
+                        </td>
+                        <td>
+                            Removes the <i>att</i> attribute from the <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.removeAttributeNode(<i>att</i>)
+                        </td>
+                        <td>
+                            Removes <i>att</i> attribute from the <i>node</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i>node</i>.setAttribute(<i>att, value</i>)
+                        </td>
+                        <td>
+                            Creates or changes the value of the <i>att</i> attribute of the <i>node</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </section>
+    <footer>
+        <p>snyderthing</p>
+    </footer>
+</body>
+
+</html>

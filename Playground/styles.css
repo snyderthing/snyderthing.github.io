@@ -20,7 +20,7 @@ html {
 body {
     margin: 0 auto;
     padding: 0.25em;
-    max-width: 960px;
+    max-width: 1020px;
     background-image: linear-gradient(to bottom, lightgray, #CEBACF);
     /* background-color: #CEBACF; */
     display: flex;
@@ -80,10 +80,36 @@ a:active {
 }
 
 main {
-    flex: 3;
+    flex: 5;
     background-color: #C6AFB1;
     padding: 10px;
     border-radius: 10px;
+}
+
+td, th {
+    border-bottom: 2px solid #65655E;
+    padding: 5px;
+}
+
+col.firstCol {
+    width: 33.33%;
+}
+
+col.secondCol {
+    width: 66.66%;
+}
+
+.centerText {
+    text-align: center;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+.space {
+    letter-spacing: 0.15em;
 }
 
 /* Make an image map in the header so that the cursor changes in only that area*/
