@@ -53,13 +53,46 @@
 */
 
 /* Global Variables */
+// store the data values in the web table
+const tableData = [];
 
+// store the text of the column headings
+const dataCategories = [];
+
+// store the index number of the table column used for sorting;
+let sortIndex = 0;
+
+// store whether the column is sorted in ascending order (1) or descending order (-1)
+let sortDirection = 1;
 
 /* Event Listener */
+window.addEventListener("load", function () {
+   defineDataArray();
+   writeTableDate();
+});
 
 /*JavaScript Functions */
 
+// Populate the tableData array as a two-dimensional array with 
+// values taken from the rows and cells of the web table body.
+function defineDataArray() {
+   let tableRows = document.querySelectorAll("table.sortable tbody tr");
+   for (let i = 0; i < tableRows.length; i++) {
+      let rowCells = tableRow[i].children();
+      const rowValues = new Array(rowCells.length);
 
+      for (let j = 0; j < rowCells.length; j++) {
+         rowValues[j] = rowCells[j].textContent;;
+      }
+      tableData[i] = rowValues;
+   }
+   tableData.sort(dataSort2D);
+}
+
+// Create the table body based on the sorted data.
+function writeTableData() {
+   
+}
 
 function dataSort2D(a, b) {
   if (isNaN(parseFloat(a[sortIndex])) === false) {
